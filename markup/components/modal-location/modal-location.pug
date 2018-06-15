@@ -1,0 +1,36 @@
+mixin modal-location(data)
+        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog.modal-dialog-centered(role='document')
+                .modal__content.location
+                    .modal__header
+                        span.modal__title ваш регион доставки
+                        button.btn-close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true')
+                    .modal__body
+                        .location__city
+                            select(placeholder="this is a placeholder").location__search.js-cityes-list
+                                option Москва
+                                option Санкт-Петербург
+                                option Екатеринбург
+                                option Новосибирск
+                                option Ростов-на-Дону
+                                option Уфа
+                            button(type="button").btn-underline
+                                span Определить автоматически
+                        span.location__title-cities Популярные города
+                        ul.location__popular
+                            li.location__item
+                                a(href="#") Москва
+                            li.location__item
+                                a(href="#") Санкт-Петербург
+                            li.location__item
+                                a(href="#") Екатеринбург
+                            li.location__item
+                                a(href="#") Новосибирск
+                            li.location__item
+                                a(href="#") Ростов-на-Дону
+                            li.location__item
+                                a(href="#") Уфа
+
+                    .modal__footer
+                        button.modal__save.btn.btn--sm(type='button', data-dismiss='modal') Запомнить выбор

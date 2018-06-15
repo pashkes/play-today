@@ -1,0 +1,101 @@
+.modal-backdrop.show {
+    opacity: .34;
+}
+.modal {
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 522px;
+            margin: 1.75rem auto;
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 35px 30px;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        outline: 0;
+    }
+    &__header {
+        padding: 0;
+    }
+    &__title {
+        display: block;
+        margin-bottom: 23px;
+        text-transform: uppercase;
+        color: #191e2a;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__save {
+        font-weight: 300;
+    }
+}
+.location {
+    &__city {
+        margin-bottom: 35px;
+    }
+    &__popular {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__popular {
+        margin-bottom: 30px;
+        color: #191e2a;
+    }
+    &__item {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            padding: 4px 0;
+            color: #191e2a;
+        }
+    }
+    .SumoSelect {
+        width: 100%;
+        margin-bottom: 7px;
+    }
+    .SelectBox {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .SumoSelect > .CaptionCont > span {
+        padding-right: 0;
+    }
+    .SumoSelect > .CaptionCont {
+        border: 1px solid #c0c1ca;
+        border-radius: 0;
+    }
+    .SumoSelect > .CaptionCont > label {
+        display: none;
+    }
+    .SumoSelect.open .search-txt {
+        padding-left: 14px;
+        padding-right: 14px;
+        color: #adabae;
+        font-family: "Roboto Condensed";
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.28px;
+    }
+    .SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont, .SumoSelect.open > .CaptionCont {
+        box-shadow: none;
+    }
+    .SumoSelect > .optWrapper > .options li.opt {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+    .SumoSelect > .optWrapper > .options li.opt label {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,103 @@
+.menu {
+    &__list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @include media-breakpoint-up(xl) {
+            justify-content: center;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+    &__item {
+        &:hover {
+            .menu__sub-wrapper {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+    }
+    &__link {
+        position: relative;
+        display: block;
+        padding: 20px 30px;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.48px;
+        z-index: 2;
+        &--icon {
+            &::before {
+                content: '';
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include bg($icon-arrow-down)
+            }
+        }
+    }
+    &__sub-wrapper {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding-bottom: 25px;
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgba(#fff, .8);
+        transition: $transition-base;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -1000px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            box-shadow: 0px 0px 16px 0px rgba(2, 3, 3, 0.31);
+        }
+    }
+    &__sub {
+        margin: 0 0 30px;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__link-second {
+        display: block;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-weight: 300;
+    }
+    &__title {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    &__tags {
+        li {
+            margin-bottom: 14px;
+        }
+    }
+    &__last-list {
+        @include media-breakpoint-up(xl) {
+            position: relative;
+            padding-left: 18px;
+            border-left: 1px solid #e7e8ea;
+        }
+    }
+}
+
+.header.show {
+    background-color: rgba(#fff, .8);
+    .menu__link--icon.up::before {
+        @include bg($icon-arrow-up)
+    }
+}
