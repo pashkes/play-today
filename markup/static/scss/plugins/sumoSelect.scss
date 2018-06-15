@@ -1,0 +1,84 @@
+.header__select-lang {
+    .SumoSelect {
+        width: 206px;
+    }
+    .SelectBox {
+        padding: 0 0 0 19px;
+    }
+    .SumoSelect > .CaptionCont > label {
+        display: none;
+    }
+    .SumoSelect:hover > .CaptionCont,
+    .SumoSelect.open > .CaptionCont,
+    .SumoSelect:focus > .CaptionCont {
+        box-shadow: none;
+        border: none;
+    }
+    .SumoSelect > .CaptionCont {
+        position: relative;
+        border: none;
+        min-height: auto;
+        background-color: transparent;
+        border-radius: 0;
+        margin: 0;
+
+    }
+    .SumoSelect > .CaptionCont span {
+        padding-right: 0;
+        display: inline-block;
+        line-height: 15px;
+        font-weight: 300;
+        color: #010101;
+        border-bottom: 1px dashed #000000;
+        text-transform: uppercase;
+        transition: $transition-base;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .SumoSelect.open > .optWrapper {
+        top: 17px;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .SumoSelect > .optWrapper {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        top: 17px;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 6px rgba(2, 3, 3, 0.03);
+        transform: translateY(5px);
+        transition: $transition-base;
+    }
+    .SumoSelect > .optWrapper > .options li.opt {
+        padding: 19px 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-radius: 0;
+        cursor: pointer;
+        border-bottom: none;
+        transition: $transition-base;
+    }
+    .SumoSelect > .optWrapper > .options li.opt.selected {
+        border-bottom: 1px solid #e5e5e5;
+        border-top: 1px solid #e5e5e5;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:first-child {
+            border-top: none;
+        }
+    }
+    .SumoSelect > .optWrapper > .options li.opt:hover {
+        background-color: #f0f0f0;
+        font-weight: 700;
+        border-color: transparent;
+    }
+    label {
+        margin-bottom: 0;
+    }
+}
+

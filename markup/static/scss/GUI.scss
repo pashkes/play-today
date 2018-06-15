@@ -1,2 +1,151 @@
-// GUI stylies of the project
-// For example, styles of the links, buttons and so on.
+a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    transition: $transition-base;
+    &:hover {
+        color: #7866a1;
+        text-decoration: none;
+    }
+}
+.btn-underline {
+    position: relative;
+    display: block;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    line-height: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    &.icon {
+        padding: 0 0 0 27px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            @include bg($icon-pointer);
+        }
+    }
+    &.uppercase {
+        text-transform: uppercase;
+    }
+    span {
+        color: #010101;
+        border-bottom: 1px dashed #000000;
+        transition: $transition-base;
+        &:hover {
+            color: #7765a1;
+            text-decoration: none;
+            border-bottom-color: #7765a1;
+        }
+    }
+}
+.btn {
+    padding-right: 22px;
+    padding-left: 22px;
+    border: none;
+    text-transform: uppercase;
+    background-color: $purple;
+    color: #fff;
+    text-align: center;
+    transition: $transition-base;
+    &:hover {
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(170, 154, 208, 0.66);
+        background-color: #af98e5;
+    }
+    &--sm {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 14px;
+    }
+
+    &--lg {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-size: 16px;
+        min-width: 197px;
+    }
+    &--icon {
+        background-color: #7765a1;
+        min-width: 199px;
+        span {
+            position:relative;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 28px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -4px;
+                left: 0;
+                @include bg($icon-cart)
+            }
+        }
+    }
+}
+.field {
+    padding: 7px 13px;
+    border: 1px solid #c0c1ca;
+    background-color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
+    transition: $transition-base;
+    @include placeholder {
+        color: #adabae;
+        font-weight: 300;
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+    }
+    &:focus {
+        border-color: $purple;
+        outline: none;
+    }
+}
+.tags {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    &__item {
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--blue span {
+            background-color: $blue;
+        }
+        &--yellow span {
+            background-color: $yellow;
+        }
+        &--green span {
+            background-color: $green;
+        }
+        &--pink span {
+            background-color: $pink;
+        }
+        &--red span {
+            background-color: $red;
+        }
+        span {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+.btn-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    span {
+        display: block;
+        @include bg($icon-cross);
+    }
+}

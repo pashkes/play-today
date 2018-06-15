@@ -53,7 +53,7 @@ module.exports = {
          * Use linting of js-files
          * @type {Boolean}
          */
-        lint: true,
+        lint: false,
 
         /**
          * Use babel for ES6(ES7-ESNext) syntax support
@@ -135,7 +135,7 @@ module.exports = {
          * Do you need to use notify?
          * @type {Boolean}
          */
-        useNotify: true,
+        useNotify: false,
 
         /**
          * Title for notifier
@@ -155,14 +155,14 @@ module.exports = {
              * @type {String, undefined}
              * For example 'Glass' in OS X
              */
-            onSuccess: undefined,
+            onSuccess: String,
 
             /**
              * Sound after failed finishing of task
              * @type {String, undefined}
              * For example 'Glass' in OS X
              */
-            onError: undefined
+            onError: String
         },
 
         /**

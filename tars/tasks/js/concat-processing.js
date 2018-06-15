@@ -22,6 +22,7 @@ const jsPaths = [].concat.apply([], [
     `./markup/${staticFolderName}/js/framework/**/*.js`,
     `./markup/${staticFolderName}/js/libraries/**/*.js`,
     `./markup/${staticFolderName}/js/plugins/**/*.js`,
+    `./markup/${staticFolderName}/js/main.js`,
     tars.config.js.jsPathsToConcatBeforeModulesJs,
     `./markup/${tars.config.fs.componentsFolderName}/**/*.js`,
     tars.config.js.jsPathsToConcatAfterModulesJs,

@@ -2,22 +2,16 @@
 
 html, body {
     height: 100%;
-    font-family: 'Roboto Condensed', sans-serif;
+    font: 16px/1.5 'Roboto Condensed', Arial sans-serif;
+    color: #000;
 }
-
-.page {
-
+.home-header {
+    background-color: #F0F3F9;
 }
-
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
+.position-static {
+    position: static;
 }
-
-* html .page__wrapper {
-    height: 100%;
-}
-
-.page__buffer {
-    height: 50px;
+img {
+    max-width: 100%;
+    height: auto;
 }

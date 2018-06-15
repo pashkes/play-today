@@ -24,6 +24,7 @@ module.exports = () => {
             `${jsFolderPath}/framework/**/*.js`,
             `${jsFolderPath}/libraries/**/*.js`,
             `${jsFolderPath}/plugins/**/*.js`,
+            `${jsFolderPath}/main.js`,
             `markup/${tars.config.fs.componentsFolderName}/**/*.js`
         );
 

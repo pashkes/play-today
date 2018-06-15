@@ -28,5 +28,21 @@
     text-align: justify;
     text-justify: newspaper;
 }
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
 
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
 // You can add your own mixins here:
