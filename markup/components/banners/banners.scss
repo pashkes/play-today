@@ -1,0 +1,49 @@
+.banners {
+    position: relative;
+    padding-bottom: 23px;
+    text-align: center;
+    overflow: hidden;
+    @include media-breakpoint-up(xl) {
+        order: -1;
+    }
+    .container {
+        padding: 0;
+    }
+    &__slide {
+        position: relative;
+    }
+    .slick-slide {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+    .slick-list {
+        margin-right: -16px;
+        margin-left: -16px;
+    }
+    img {
+        display: inline-block;
+    }
+    &__buttons {
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+    }
+    &__link {
+        min-width: 136px;
+        margin-right: 9px;
+        padding: 8px 20px;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        background-color: rgba(#fff, .5);
+        text-align: center;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__url {
+        display: block;
+    }
+}

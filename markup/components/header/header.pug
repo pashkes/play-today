@@ -1,7 +1,7 @@
 include ../menu/menu.pug
 
 mixin header(data)
-    .header.js-header
+    header.header.js-header
        .header__top
            .container
                .header__inner
@@ -26,7 +26,8 @@ mixin header(data)
                        button(type="button").header__show.js-search-show
                    a(href="#").header__item.header__item--sign-in
                    a(href="#").header__item.header__item--favorite
-                   a(href="#").header__item.header__item--cart.has-products
+                   // You need add class .has-products if have products
+                   a(href="#").header__item.header__item--cart
                         span 12
-
+                        .header__tooltip.tooltip Ваша корзина пуста
        +menu()

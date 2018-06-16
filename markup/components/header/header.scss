@@ -149,6 +149,31 @@
                 font-weight: 300;
                 line-height: 24px;
             }
+            &:hover {
+                .header__tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: none;
+                }
+            }
+        }
+    }
+    &__tooltip {
+        position: absolute;
+        top: calc(100% + 15px);
+        right: -14px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        z-index: 4;
+       @media (min-width: 1450px) {
+            right: -32px;
+        }
+        &::before {
+            right: 16px;
+            @media (min-width: 1450px) {
+                right: 30px;
+            }
         }
     }
     &__field {

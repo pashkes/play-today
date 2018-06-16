@@ -5,24 +5,23 @@ html(class="no-js", lang="ru")
     include ../components/header/header.pug
     include ../components/promo/promo.pug
     include ../components/modal-location/modal-location.pug
+    include ../components/banners/banners.pug
+    include ../components/novelties/novelties.pug
+    include ../components/subscribe/subscribe.pug
     include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
+
     body.page
         .home-header
             +header()
             +promo()
-        section.page__wrapper
-
-            //- Include your components here
-
-
-            .page__buffer
-
-        .page__footer
-            +footer()
-        +modal-location()
+        .page-adv
+            +novelties()
+            +banners()
+        +subscribe()
+        +footer()
         //- Main scripts. You can replace it, but I recommend you to leave it here
+        +modal-location()
         script(src='%=static=%js/main%=hash=%%=min=%.js')
-

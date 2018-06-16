@@ -1,2 +1,68 @@
 mixin footer(data)
-    footer.footer
+    footer.footer.container
+        .row
+            .col-xl.d-none.d-xl-block.footer__col-border
+                .footer__inner-col
+                    strong.footer__title о компании
+                    ul.footer__nav
+                        li
+                            a(href="#").footer__link История
+                        li
+                            a(href="#").footer__link Дневник PlayToday
+                        li
+                            a(href="#").footer__link Контакты
+                        li
+                            a(href="#").footer__link Карьера в PlayToday
+            .col-xl.d-none.d-xl-block.footer__col-border
+                .footer__inner-col
+                    strong.footer__title Сотрудничество
+                    ul.footer__nav
+                        li
+                            a(href="#").footer__link Оптовым партнерам
+                        li
+                            a(href="#").footer__link Работа по франшизе
+            .col-xl.d-none.d-xl-block.footer__col-border
+                .footer__inner-col
+                    strong.footer__title Покупателям
+                    ul.footer__nav
+                        li
+                            a(href="#").footer__link Программа лояльности
+                        li
+                            a(href="#").footer__link Условия возврата
+                        li
+                            a(href="#").footer__link Доставка и оплата
+            .col-xl.d-none.d-xl-block.footer__col-border
+                .footer__inner-col
+                    strong.footer__title нужна помощь?
+                    ul.footer__nav
+                        li
+                            a(href="tel:+784997077365").footer__link 8 (499) 707-73-65
+                        li
+                            a(href="tel:88005057365").footer__link 8 (800) 505-73-65
+                        li
+                            a(href="#").footer__link Доставка и оплата
+                        li
+                            a(href="#").footer__link.footer__title наши магазины
+            .col-xl.footer__col-border
+                .footer__inner-col
+                    .footer__pay.d-none.d-xl-block
+                        strong.footer__title Мы принимаем
+                        img(src="%=static=%img/general/visa.png" width="48" height="55" alt="visa pay")
+                        img(src="%=static=%img/general/master-card.png" width="38" height="26" alt="visa pay")
+                    .footer__social
+                        strong.footer__title Присоединяйся
+                        ul.social
+                            li.social__item
+                                a(href="#").social__link.social__link--vk vkontakte
+                            li.social__item
+                                a(href="#").social__link.social__link--insta instagram
+                            li.social__item
+                                a(href="#").social__link.social__link--fb facebook
+            .col.d-xl-none
+                a(href="#").footer__follow-main-site.btn.btn--icon Перейти на основной сайт
+
+        .footer__copy
+            p
+                a(href="#") Политика конфиденциальности
+                | &#169; 2004-2018 Интернет-магазин детской одежды Playtoday
+

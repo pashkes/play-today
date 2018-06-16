@@ -1,8 +1,19 @@
 mixin promo()
     .promo
-        .container
-            ul.promo__slider.js-promo-slider
-                li.promo__slide
-                    img(src="%=static=%img/general/promo-first-img.png")
-                li.promo__slide
-                    img(src="%=static=%img/general/promo-baby.png")
+        ul.promo__slider.js-promo-slider
+            li.promo__slide
+                .promo__photo
+                    div.promo__wrapper
+                        picture
+                            source(media="(min-width: 1315px)" srcset="%=static=%img/general/promo-first-img.jpg")
+                            img(src="%=static=%img/general/promo-girl.png" alt="Девочки")
+                .promo__buttons
+                    a(href="#").promo__link Мальчики
+                    a(href="#").promo__link Девочки
+            li.promo__slide
+                .promo__photo
+                    div.promo__wrapper
+                        img(src="%=static=%img/general/promo-baby.jpg")
+
+        .dots.promo__dots
+

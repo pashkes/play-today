@@ -1,44 +1,3 @@
-.modal-backdrop.show {
-    opacity: .34;
-}
-.modal {
-    @media (min-width: 576px) {
-        .modal-dialog {
-            max-width: 522px;
-            margin: 1.75rem auto;
-        }
-    }
-    &__content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 35px 30px;
-        pointer-events: auto;
-        background-color: #fff;
-        background-clip: padding-box;
-        outline: 0;
-    }
-    &__header {
-        padding: 0;
-    }
-    &__title {
-        display: block;
-        margin-bottom: 23px;
-        text-transform: uppercase;
-        color: #191e2a;
-        font-size: 20px;
-        font-weight: 300;
-    }
-    &__close {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    &__save {
-        font-weight: 300;
-    }
-}
 .location {
     &__city {
         margin-bottom: 35px;
@@ -58,6 +17,9 @@
             vertical-align: top;
             padding: 4px 0;
             color: #191e2a;
+            &:hover {
+                color: #7866a1;
+            }
         }
     }
     .SumoSelect {

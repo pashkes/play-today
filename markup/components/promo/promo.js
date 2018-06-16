@@ -1,3 +1,5 @@
 $('.js-promo-slider').slick({
-    arrows: false
+    arrows: false,
+    dots: true,
+    appendDots: $('.promo .dots')
 });

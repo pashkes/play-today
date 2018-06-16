@@ -1,1 +1,89 @@
+.promo {
+    position:relative;
+    font-size: 0;
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 56px;
+    }
+    &__slide {
+        position:relative;
+        text-align: center;
+        overflow: hidden;
+        img {
+            max-height: 467px;
+            @include media-breakpoint-up(xl) {
+                max-height: 899px;
+            }
+        }
+    }
+
+    &__wrapper {
+        position:relative;
+        max-width: 1550px;
+        margin-right: auto;
+        margin-left: auto;
+        @include media-breakpoint-up(xl) {
+            margin-right: auto;
+        }
+    }
+    &__photo {
+        position: relative;
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: 465px;
+    }
+    &__buttons {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 90px;
+        transform: translateX(-50%);
+        @include media-breakpoint-up(xl) {
+            bottom: 300px;
+        }
+    }
+    &__link {
+        min-width: 141px;
+        padding: 9px 10px;
+        margin-right: 9px;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.32px;
+        background-color: rgba(#fff, .5);
+        @include media-breakpoint-up(xl) {
+            min-width: 151px;
+            padding-top: 14px;
+            padding-bottom: 12px;
+            font-size: 18px;
+            letter-spacing: 0.36px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__dots {
+        bottom: 9px;
+        @include media-breakpoint-up(xl) {
+            bottom: 30px;
+        }
+        .slick-active {
+            button {
+                width: 70px;
+                &::before {
+                    height: 1px;
+                    width: 100%;
+                    border-radius: 0;
+                    transition: width .4s;
+                }
+            }
+        }
+    }
+}
+.slick-slider {
+    margin: 0;
+    padding: 0;
+}
+
 

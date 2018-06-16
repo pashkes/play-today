@@ -1,0 +1,58 @@
+.subscribe {
+    background-color: #f2f4f7;
+    @include media-breakpoint-up(xl) {
+        background-color: transparent;
+    }
+    &__bg {
+        background-color: #f2f4f7;
+        padding-top: 23px;
+        padding-bottom: 20px;
+        @include media-breakpoint-up(xl) {
+            padding-top: 27px;
+            padding-bottom: 27px;
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(xl) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__form {
+        display: flex;
+    }
+    &__label {
+        margin-bottom: 7px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.07px;
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 0;
+            margin-right: 30px;
+            font-size: 16px;
+        }
+    }
+    &__field {
+        min-width: 177px;
+        margin-right: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        height: 31px;
+        @include media-breakpoint-up(xl) {
+            min-width: 320px;
+            height: auto;
+            margin-right: 20px;
+            padding-right: 13px;
+            padding-left: 13px;
+        }
+    }
+    &__submit {
+        padding: 5px 12px;
+        @include media-breakpoint-up(xl) {
+            min-width: 130px;
+        }
+    }
+}

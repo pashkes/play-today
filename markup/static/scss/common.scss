@@ -12,6 +12,20 @@ html, body {
     position: static;
 }
 img {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
+}
+h2 {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.container {
+    padding-right: 14px;
+    padding-left: 14px;
+}
+.page-adv {
+    display: flex;
+    flex-direction: column;
 }
