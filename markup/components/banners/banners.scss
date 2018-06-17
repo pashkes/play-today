@@ -6,22 +6,37 @@
     @include media-breakpoint-up(xl) {
         order: -1;
     }
-    .container {
-        padding: 0;
-    }
     &__slide {
         position: relative;
+        @include media-breakpoint-up(xl) {
+            text-align: left;
+        }
     }
     .slick-slide {
+        width: 400px;
+        display: inline-block;
         margin-right: 16px;
         margin-left: 16px;
+        @include media-breakpoint-up(xl) {
+            margin-right: 57px;
+            margin-left: 0;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    img {
+        display: inline-block;
     }
     .slick-list {
         margin-right: -16px;
         margin-left: -16px;
-    }
-    img {
-        display: inline-block;
+        text-align: left;
+        font-size: 0;
+        @include media-breakpoint-up(xl) {
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
     &__buttons {
         position: absolute;
@@ -45,5 +60,6 @@
     }
     &__url {
         display: block;
+        text-align: center;
     }
 }

@@ -29,3 +29,18 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+.page-catalog {
+    padding-top: 30px;
+    .checkbox__icon {
+        left: 23px;
+    }
+}
+.modal-backdrop {
+    z-index: -1;
+    &.show {
+        z-index: 1040;
+    }
+}
+.ml-auto {
+    margin-left: auto;
+}

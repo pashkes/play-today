@@ -1,0 +1,28 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/header/header.pug
+    include ../components/modal-location/modal-location.pug
+    include ../components/subscribe/subscribe.pug
+    include ../components/footer/footer.pug
+    include ../components/categories/categories.pug
+    include ../components/filter/filter.pug
+    head
+        +head(head.defaults)
+
+    body
+        +header()
+        .page-catalog
+            .container
+                .row.no-gutters
+                    .col-2
+                        +categories()
+                    .col-10
+                        +filter()
+        +subscribe()
+        +footer()
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        +modal-location()
+        .modal-backdrop.fade
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

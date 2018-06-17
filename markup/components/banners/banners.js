@@ -22,7 +22,8 @@
             settings: {
                 slidesToShow: 3,
                 dots: false,
-                initialSlide: 0
+                initialSlide: 0,
+                variableWidth: true,
             }
 
         }]

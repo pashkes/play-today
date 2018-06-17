@@ -1,7 +1,8 @@
 .footer {
     padding-top: 30px;
     @include media-breakpoint-up(xl) {
-        padding-right: 20px;
+        padding-right: 31px;
+        padding-left: 31px
     }
     &__title {
         display: block;
@@ -35,6 +36,12 @@
         margin-bottom: 30px;
         @include media-breakpoint-up(xl) {
             margin-bottom: 20px;
+        }
+        img {
+            margin-right: 3px;
+            &:last-of-type {
+                margin-right: 0;
+            }
         }
     }
     &__inner-col {

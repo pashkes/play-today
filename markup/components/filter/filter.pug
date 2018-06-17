@@ -1,0 +1,184 @@
+mixin filter(data)
+    form.filter
+        h1.filter__title солнцезащитные очки для девочек
+        .row.align-items-start
+            .col-auto
+                ul.filter__list
+                    li.filter__item.filter__item--old
+                        button(type="button").filter__name.js-filter-show
+                            span.filter__icon Возраст
+                        ul.filter__sublist
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="Новорожденные")
+                                    span.checkbox__icon
+                                    span.filter__element Новорожденные
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="от 1 до 3 лет")
+                                    span.checkbox__icon
+                                    span.filter__element от 1 до 3 лет
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="от 4 до 14 лет")
+                                    span.checkbox__icon
+                                    span.filter__element от 4 до 14 лет
+                    li.filter__item.filter__item--size
+                        button(type="button").filter__name.js-filter-show
+                            span.filter__icon Размер
+                        ul.filter__sublist
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="xl")
+                                    span.checkbox__icon
+                                    span.filter__element xl
+                                    span.filter__amount (23)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="s")
+                                    span.checkbox__icon
+                                    span.filter__element s
+                                    span.filter__amount (3)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="m")
+                                    span.checkbox__icon
+                                    span.filter__element m
+                                    span.filter__amount (54)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox" value="xxl")
+                                    span.checkbox__icon
+                                    span.filter__element xxl
+                                    span.filter__amount (32)
+                    li.filter__item.filter__item--color
+                        button(type="button").filter__name.js-filter-show
+                            span.filter__icon Цвет
+                        ul.filter__sublist
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element.filter__color.filter__color--white белый
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element.filter__color.filter__color--yellow желтый
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element.filter__color.filter__color--red красный
+                                    span.filter__amount (32)
+                    li.filter__item.filter__item--season
+                        button(type="button").filter__name.js-filter-show
+                            span.filter__icon Сезон
+                        ul.filter__sublist
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Весна
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Жаркое Лето
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Зима
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Лето
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Новый Год
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Осень
+                                    span.filter__amount (32)
+                    li.filter__item.filter__item--collection
+                        button(type="button").filter__name.js-filter-show
+                            span.filter__icon Коллекция
+                        ul.filter__sublist
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Веселые джунгли
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Джунгли зовут!
+                                    span.filter__amount (32)
+                            li.filter__number
+                                label.filter__checkbox.checkbox
+                                    input(type="checkbox")
+                                    span.checkbox__icon
+                                    span.filter__element Маленький динозаврик
+                                    span.filter__amount (32)
+                    li.filter__item.filter__item--cost
+                        button(type="button").filter__name.js-filter-show
+                            span.filter__icon Цена
+                        .filter__sublist
+                            .filter__slider
+                                .filter__fields
+                                    label.filter__price-range
+                                        span от
+                                        input(type="text").filter__cost-field.field.js-from-cost
+                                    label.filter__price-range
+                                        span до
+                                        input(type="text").filter__cost-field.field.js-to-cost
+                                #slider-range
+            .col-auto.ml-auto
+                form
+                    ul.filter__list
+                        li.filter__item.filter__item--sort
+                            button(type="button").filter__name.js-filter-show
+                                span.filter__icon Сортировка
+                            ul.filter__sublist
+                                li.filter__number
+                                    label.filter__checkbox.checkbox
+                                        input(type="radio" name="product-sort")
+                                        span.checkbox__icon
+                                        span.filter__element цена возрастание
+                                li.filter__number
+                                    label.filter__checkbox.checkbox
+                                        input(type="radio" name="product-sort")
+                                        span.checkbox__icon
+                                        span.filter__element цена убывание
+                                li.filter__number
+                                    label.filter__checkbox.checkbox
+                                        input(type="radio" name="product-sort")
+                                        span.checkbox__icon
+                                        span.filter__element по дате добавления
+                                li.filter__number
+                                    label.filter__checkbox.checkbox
+                                        input(type="radio" name="product-sort")
+                                        span.checkbox__icon
+                                        span.filter__element сначала скидки
+                                li.filter__number
+                                    label.filter__checkbox.checkbox
+                                        input(type="radio" name="product-sort")
+                                        span.checkbox__icon
+                                        span.filter__element сначала новые
+                        li.filter__item.filter__item--view-card
+                            button(type="button").filter__name

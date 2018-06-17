@@ -17,9 +17,10 @@
                 }
             },
             {
-            breakpoint: 1315,
+            breakpoint: 1344,
             settings: {
-                slidesToShow: 5
+                slidesToShow: 5,
+                variableWidth: true
             }
         }]
     });

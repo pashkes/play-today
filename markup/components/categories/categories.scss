@@ -1,0 +1,83 @@
+.categories {
+    margin-right: 20px;
+    &__title {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 13px 15px;
+        background-color: #f2f4f7;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__main-menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__item {
+        &.active {
+            .categories__link {
+                font-weight: 600;
+
+            }
+            button {
+                &::before {
+                    @include bg($icon-arrow-up);
+                }
+            }
+            .categories__sublist {
+                display: block;
+            }
+        }
+    }
+    &__link {
+        position:relative;
+        display: inline-flex;
+        padding: 15px 27px 15px 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 1.71;
+        font-weight: 500;
+    }
+    &__show-menu {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 27px;
+        height: 27px;
+        background-color: transparent;
+        border: none;
+        font-size: 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @include bg($icon-arrow-down)
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &__sublist {
+        display: none;
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style-type: none;
+    }
+    &__subitem {
+        &.active {
+            .categories__sublink {
+                font-weight: 600;
+            }
+        }
+    }
+    &__sublink {
+        display: block;
+        padding: 10px 15px;
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
+
+}
