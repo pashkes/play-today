@@ -51,10 +51,15 @@ a {
     color: #fff;
     text-align: center;
     transition: $transition-base;
+    font-weight: 300;
     &:hover {
         text-decoration: none;
         box-shadow: 0 4px 10px rgba(170, 154, 208, 0.66);
         background-color: #af98e5;
+        color: #fff;
+    }
+    &--darken {
+        background-color: #7765a1;
     }
     &--sm {
         padding-top: 7px;

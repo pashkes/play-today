@@ -1,5 +1,10 @@
 .categories {
     margin-right: 20px;
+    padding-bottom: 60px;
+    @include media-breakpoint-up(md) {
+        position: sticky;
+        top: 0;
+    }
     &__title {
         width: 100%;
         margin-bottom: 0;

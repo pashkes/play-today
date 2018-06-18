@@ -1,0 +1,329 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/header/header.pug
+    include ../components/modal-location/modal-location.pug
+    include ../components/subscribe/subscribe.pug
+    include ../components/footer/footer.pug
+    include ../components/categories/categories.pug
+    include ../components/catalog/catalog.pug
+    include ../components/filter/filter.pug
+    include ../components/choose-size/choose-size.pug
+    include ../components/add-cart/add-cart.pug
+    head
+        +head(head.defaults)
+
+    body
+        +header()
+        .page-catalog
+            .container
+                .row.no-gutters
+                    .col-sm-6.col-md-5.col-xl-2
+                        +categories()
+                    .col-sm-6.col-md-7.col-xl-10
+                        form.filter
+                            h1.filter__title солнцезащитные очки для девочек
+                            .row.align-items-start
+                                .col-md-8.col-xl-auto
+                                    ul.filter__list
+                                        li.filter__item.filter__item--old
+                                            button(type="button").filter__name.js-filter-show
+                                                span.filter__icon Возраст
+                                            button(type="button").filter__clear
+                                            ul.filter__sublist
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="Новорожденные")
+                                                        span.checkbox__icon
+                                                        span.filter__element Новорожденные
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="от 1 до 3 лет")
+                                                        span.checkbox__icon
+                                                        span.filter__element от 1 до 3 лет
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="от 4 до 14 лет")
+                                                        span.checkbox__icon
+                                                        span.filter__element от 4 до 14 лет
+                                        li.filter__item.filter__item--size
+                                            button(type="button").filter__name.js-filter-show
+                                                span.filter__icon Размер
+                                            button(type="button").filter__clear
+                                            ul.filter__sublist
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="xl")
+                                                        span.checkbox__icon
+                                                        span.filter__element xl
+                                                        span.filter__amount (23)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="s")
+                                                        span.checkbox__icon
+                                                        span.filter__element s
+                                                        span.filter__amount (3)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="m")
+                                                        span.checkbox__icon
+                                                        span.filter__element m
+                                                        span.filter__amount (54)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox" value="xxl")
+                                                        span.checkbox__icon
+                                                        span.filter__element xxl
+                                                        span.filter__amount (32)
+                                        li.filter__item.filter__item--color
+                                            button(type="button").filter__name.js-filter-show
+                                                span.filter__icon Цвет
+                                            button(type="button").filter__clear
+                                            ul.filter__sublist
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element.filter__color.filter__color--white белый
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element.filter__color.filter__color--yellow желтый
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element.filter__color.filter__color--red красный
+                                                        span.filter__amount (32)
+                                        li.filter__item.filter__item--season
+                                            button(type="button").filter__name.js-filter-show
+                                                span.filter__icon Сезон
+                                            button(type="button").filter__clear
+                                            ul.filter__sublist
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Весна
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Жаркое Лето
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Зима
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Лето
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Новый Год
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Осень
+                                                        span.filter__amount (32)
+                                        li.filter__item.filter__item--collection
+                                            button(type="button").filter__name.js-filter-show
+                                                span.filter__icon Коллекция
+                                            button(type="button").filter__clear
+                                            ul.filter__sublist
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Веселые джунгли
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Джунгли зовут!
+                                                        span.filter__amount (32)
+                                                li.filter__number
+                                                    label.filter__checkbox.checkbox
+                                                        input(type="checkbox")
+                                                        span.checkbox__icon
+                                                        span.filter__element Маленький динозаврик
+                                                        span.filter__amount (32)
+                                        li.filter__item.filter__item--cost
+                                            button(type="button").filter__name.js-filter-show
+                                                span.filter__icon Цена
+                                            button(type="button").filter__clear
+                                            .filter__sublist
+                                                .filter__slider
+                                                    .filter__fields
+                                                        label.filter__price-range
+                                                            span от
+                                                            input(type="text").filter__cost-field.field.js-from-cost
+                                                        label.filter__price-range
+                                                            span до
+                                                            input(type="text").filter__cost-field.field.js-to-cost
+                                                    #slider-range
+                                .col-md-8.col-xl-auto.ml-xl-auto
+                                    form
+                                        ul.filter__list.filter__list--sort
+                                            li.filter__item.filter__item--sort
+                                                button(type="button").filter__name.js-filter-show
+                                                    span.filter__icon Сортировка
+                                                ul.filter__sublist
+                                                    li.filter__number
+                                                        label.filter__checkbox.checkbox
+                                                            input(type="radio" name="product-sort")
+                                                            span.checkbox__icon
+                                                            span.filter__element цена возрастание
+                                                    li.filter__number
+                                                        label.filter__checkbox.checkbox
+                                                            input(type="radio" name="product-sort")
+                                                            span.checkbox__icon
+                                                            span.filter__element цена убывание
+                                                    li.filter__number
+                                                        label.filter__checkbox.checkbox
+                                                            input(type="radio" name="product-sort")
+                                                            span.checkbox__icon
+                                                            span.filter__element по дате добавления
+                                                    li.filter__number
+                                                        label.filter__checkbox.checkbox
+                                                            input(type="radio" name="product-sort")
+                                                            span.checkbox__icon
+                                                            span.filter__element сначала скидки
+                                                    li.filter__number
+                                                        label.filter__checkbox.checkbox
+                                                            input(type="radio" name="product-sort")
+                                                            span.checkbox__icon
+                                                            span.filter__element сначала новые
+                                            li.filter__item.filter__item--view-card.filter__item--to-two
+                                                button(type="button").filter__name
+
+                        .catalog
+                            .row.no-gutters.justify-content-xl-between
+                                .col-xl-auto
+                                    .product-card.catalog__card
+                                        .product-card__inner
+                                            a(href="#").product-card__img
+                                                img(src="%=static=%img/content/catalog-xl-1.jpg")
+                                            .product-card__info-buttons
+                                                button(type="button").product-card__btn.product-card__btn--favorite
+                                                button(type="button").product-card__btn.product-card__btn--size.js-show-size
+                                                button(type="button" data-toggle="modal" data-target="#choose-modal").product-card__btn.product-card__btn--cart
+                                            .product-card__sizes
+                                                +sizes()
+                                        .product-card__info
+                                            h3.product-card__title
+                                                a(href="#") Комплект для девочки
+                                            p.product-card__cost
+                                                span.product-card__discount 2499.-
+                                                span.product-card__old-cost 2499.
+                                            ul.product__tags.tags
+                                                li.tags__item.tags__item--pink
+                                                    a(href="#") новинка
+
+                                .col-xl-auto
+                                    .product-card.catalog__card
+                                        .product-card__inner
+                                            a(href="#").product-card__img
+                                                img(src="%=static=%img/content/catalog-xl-2.jpg")
+                                            .product-card__info-buttons
+                                                button(type="button").product-card__btn.product-card__btn--favorite
+                                                button(type="button").product-card__btn.product-card__btn--size.js-show-size
+                                                button(type="button" data-toggle="modal" data-target="#choose-modal").product-card__btn.product-card__btn--cart
+                                            .product-card__sizes
+                                                +sizes()
+                                        .product-card__info
+                                            h3.product-card__title
+                                                a(href="#") Комплект для девочки
+                                            p.product-card__cost
+                                                span.product-card__discount 2499.-
+                                                span.product-card__old-cost 2499.
+                                            ul.product__tags.tags
+                                                li.tags__item.tags__item--pink
+                                                    a(href="#") новинка
+                                .col-xl-auto
+                                    .product-card.catalog__card
+                                        .product-card__inner
+                                            a(href="#").product-card__img
+                                                img(src="%=static=%img/content/catalog-xxl-1.jpg")
+                                            .product-card__info-buttons
+                                                button(type="button").product-card__btn.product-card__btn--favorite
+                                                button(type="button").product-card__btn.product-card__btn--size.js-show-size
+                                                button(type="button" data-toggle="modal" data-target="#choose-modal").product-card__btn.product-card__btn--cart
+                                            .product-card__sizes
+                                                +sizes()
+                                        .product-card__info
+                                            h3.product-card__title
+                                                a(href="#") Комплект для девочки
+                                            p.product-card__cost
+                                                span.product-card__discount 2499.-
+                                                span.product-card__old-cost 2499.
+                                            ul.product__tags.tags
+                                                li.tags__item.tags__item--pink
+                                                    a(href="#") новинка
+                                .col-xl-auto
+                                    .product-card.catalog__card
+                                        .product-card__inner
+                                            a(href="#").product-card__img
+                                                img(src="%=static=%img/content/catalog-xl-3.jpg")
+                                            .product-card__info-buttons
+                                                button(type="button").product-card__btn.product-card__btn--favorite
+                                                button(type="button").product-card__btn.product-card__btn--size.js-show-size
+                                                button(type="button" data-toggle="modal" data-target="#choose-modal").product-card__btn.product-card__btn--cart
+                                            .product-card__sizes
+                                                +sizes()
+                                        .product-card__info
+                                            h3.product-card__title
+                                                a(href="#") Комплект для девочки
+                                            p.product-card__cost
+                                                span.product-card__discount 2499.-
+                                                span.product-card__old-cost 2499.
+                                            ul.product__tags.tags
+                                                li.tags__item.tags__item--pink
+                                                    a(href="#") новинка
+                                .col-xl-auto
+                                    .product-card.catalog__card
+                                        .product-card__inner
+                                            a(href="#").product-card__img
+                                                img(src="%=static=%img/content/catalog-xl-4.jpg")
+                                            .product-card__info-buttons
+                                                button(type="button").product-card__btn.product-card__btn--favorite
+                                                button(type="button").product-card__btn.product-card__btn--size.js-show-size
+                                                button(type="button" data-toggle="modal" data-target="#choose-modal").product-card__btn.product-card__btn--cart
+                                            .product-card__sizes
+                                                +sizes()
+                                        .product-card__info
+                                            h3.product-card__title
+                                                a(href="#") Комплект для девочки
+                                            p.product-card__cost
+                                                span.product-card__discount 2499.-
+                                                span.product-card__old-cost 2499.
+                                            ul.product__tags.tags
+                                                li.tags__item.tags__item--pink
+                                                    a(href="#") новинка
+                            .catalog__footer
+                                a(href="#").catalog__show-more.btn.btn--sm Показать еще 20 из 40
+
+
+        +subscribe()
+        +footer()
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        +modal-location()
+        +choose-size()
+        +add-cart
+        .modal-backdrop.fade
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

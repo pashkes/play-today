@@ -1,0 +1,29 @@
+.choose-size {
+    &__body {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 31px;
+        border-top: 1px solid #f1f1f3;
+        border-bottom: 1px solid #f1f1f3;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sizes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sizes__item {
+        margin-right: 4px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    &__footer {
+        text-align: center;
+    }
+    &__table {
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,39 @@
+mixin choose-size(data)
+    .choose-size.modal.fade(tabindex='-1', id="choose-modal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+        .modal-dialog.modal-dialog-centered(role='document')
+            .modal__content.location
+                .modal__header
+                    span.modal__title Выберите размер
+                    button.btn-close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true')
+                .modal__body.choose-size__body
+                    .choose-size__inner
+                        .choose-size__size.sizes
+                            label.sizes__item
+                                input(type="radio" name="size-1").sizes__radio
+                                span 104
+                            label.sizes__item
+                                input(type="radio" name="size-1" checked).sizes__radio
+                                span 110
+                            label.sizes__item
+                                input(type="radio" name="size-1").sizes__radio
+                                span 112
+                            label.sizes__item
+                                input(type="radio" name="size-1" disabled).sizes__radio
+                                span 116
+                            label.sizes__item
+                                input(type="radio" name="size-1" disabled).sizes__radio
+                                span 122
+                            label.sizes__item
+                                input(type="radio" name="size-1" disabled).sizes__radio
+                                span 128
+                            label.sizes__item
+                                input(type="radio" name="size-1").sizes__radio
+                                span 134
+                            label.sizes__item
+                                input(type="radio" name="size-1").sizes__radio
+                                span 146
+                        a(href="#" _target="blank").choose-size__table.btn-underline
+                            span Таблица размеров
+                .modal__footer.choose-size__footer
+                    button.choose-size__btn.btn.btn--lg.btn--darken.js-add-cart(type='button') Добавить в корзину

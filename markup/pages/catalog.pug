@@ -7,7 +7,10 @@ html(class="no-js", lang="ru")
     include ../components/subscribe/subscribe.pug
     include ../components/footer/footer.pug
     include ../components/categories/categories.pug
+    include ../components/catalog/catalog.pug
     include ../components/filter/filter.pug
+    include ../components/choose-size/choose-size.pug
+    include ../components/add-cart/add-cart.pug
     head
         +head(head.defaults)
 
@@ -16,13 +19,16 @@ html(class="no-js", lang="ru")
         .page-catalog
             .container
                 .row.no-gutters
-                    .col-2
+                    .col-sm-6.col-md-5.col-xl-2
                         +categories()
-                    .col-10
+                    .col-sm-6.col-md-7.col-xl-10
                         +filter()
+                        +catalog()
         +subscribe()
         +footer()
         //- Main scripts. You can replace it, but I recommend you to leave it here
         +modal-location()
+        +choose-size()
+        +add-cart
         .modal-backdrop.fade
         script(src='%=static=%js/main%=hash=%%=min=%.js')

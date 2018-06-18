@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     font: 16px/1.5 'Roboto Condensed', Arial sans-serif;
     color: #000;
+    font-weight: 300;
 }
 .home-header {
     background-color: #F0F3F9;
@@ -39,6 +40,11 @@ h2 {
     z-index: -1;
     &.show {
         z-index: 1040;
+    }
+}
+.ml-xl-auto {
+    @include media-breakpoint-up(xl) {
+        margin-left: auto;
     }
 }
 .ml-auto {

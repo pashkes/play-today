@@ -2,11 +2,12 @@ mixin filter(data)
     form.filter
         h1.filter__title солнцезащитные очки для девочек
         .row.align-items-start
-            .col-auto
+            .col-md-8.col-xl-auto
                 ul.filter__list
                     li.filter__item.filter__item--old
                         button(type="button").filter__name.js-filter-show
                             span.filter__icon Возраст
+                        button(type="button").filter__clear
                         ul.filter__sublist
                             li.filter__number
                                 label.filter__checkbox.checkbox
@@ -26,6 +27,7 @@ mixin filter(data)
                     li.filter__item.filter__item--size
                         button(type="button").filter__name.js-filter-show
                             span.filter__icon Размер
+                        button(type="button").filter__clear
                         ul.filter__sublist
                             li.filter__number
                                 label.filter__checkbox.checkbox
@@ -51,9 +53,10 @@ mixin filter(data)
                                     span.checkbox__icon
                                     span.filter__element xxl
                                     span.filter__amount (32)
-                    li.filter__item.filter__item--color
+                    li.filter__item.filter__item--color.active
                         button(type="button").filter__name.js-filter-show
-                            span.filter__icon Цвет
+                            span.filter__icon Бирюзовый
+                        button(type="button").filter__clear
                         ul.filter__sublist
                             li.filter__number
                                 label.filter__checkbox.checkbox
@@ -73,9 +76,10 @@ mixin filter(data)
                                     span.checkbox__icon
                                     span.filter__element.filter__color.filter__color--red красный
                                     span.filter__amount (32)
-                    li.filter__item.filter__item--season
+                    li.filter__item.filter__item--season.active
                         button(type="button").filter__name.js-filter-show
-                            span.filter__icon Сезон
+                            span.filter__icon 2 метки
+                        button(type="button").filter__clear
                         ul.filter__sublist
                             li.filter__number
                                 label.filter__checkbox.checkbox
@@ -113,9 +117,10 @@ mixin filter(data)
                                     span.checkbox__icon
                                     span.filter__element Осень
                                     span.filter__amount (32)
-                    li.filter__item.filter__item--collection
+                    li.filter__item.filter__item--collection.filter__name--to-two
                         button(type="button").filter__name.js-filter-show
                             span.filter__icon Коллекция
+                        button(type="button").filter__clear
                         ul.filter__sublist
                             li.filter__number
                                 label.filter__checkbox.checkbox
@@ -138,6 +143,7 @@ mixin filter(data)
                     li.filter__item.filter__item--cost
                         button(type="button").filter__name.js-filter-show
                             span.filter__icon Цена
+                        button(type="button").filter__clear
                         .filter__sublist
                             .filter__slider
                                 .filter__fields
@@ -148,9 +154,9 @@ mixin filter(data)
                                         span до
                                         input(type="text").filter__cost-field.field.js-to-cost
                                 #slider-range
-            .col-auto.ml-auto
+            .col-md-8.col-xl-auto.ml-xl-auto
                 form
-                    ul.filter__list
+                    ul.filter__list.filter__list--sort
                         li.filter__item.filter__item--sort
                             button(type="button").filter__name.js-filter-show
                                 span.filter__icon Сортировка
@@ -180,5 +186,5 @@ mixin filter(data)
                                         input(type="radio" name="product-sort")
                                         span.checkbox__icon
                                         span.filter__element сначала новые
-                        li.filter__item.filter__item--view-card
+                        li.filter__item.filter__item--view-card.filter__item--to-three
                             button(type="button").filter__name

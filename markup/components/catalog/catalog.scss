@@ -1,0 +1,21 @@
+.catalog {
+    padding-top: 22px;
+    text-align: left;
+    padding-bottom: 67px;
+    &__card {
+        margin-bottom: 60px;
+    }
+    .sizes__item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__footer {
+        padding-top: 30px;
+        text-align: center;
+    }
+    &__show-more {
+        min-width: 190px;
+    }
+}

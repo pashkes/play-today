@@ -7,17 +7,60 @@
     }
     &__list {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         margin: 0;
         padding: 0;
         border: 1px solid #e5e5e5;
         list-style-type: none;
+        @include media-breakpoint-up(xl) {
+            flex-direction: row;
+        }
+        &--sort {
+            flex-direction: row;
+        }
+    }
+    &__clear {
+        display: none;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            @include bg($icon-cross-white);
+            transform: translateY(-50%);
+        }
     }
     &__item {
         position: relative;
         border-right: 1px solid #e5e5e5;
+        @media (max-width: 1343px) {
+        width: 100%;
+    }
         &:last-child {
             border-right: none;
+        }
+        &.active {
+            .filter__clear {
+                display: block;
+            }
+            .filter__name {
+                background-color: #7865a4;
+                border-color: #e5e5e5;
+                color: #fff;
+                font-weight: 300;
+                span::before {
+                    display: none;
+                }
+            }
         }
         &.show {
             .filter__sublist {
@@ -33,28 +76,39 @@
         }
         &--old,
         &--size {
-            min-width: 140px;
+            @include media-breakpoint-up(xl) {
+                min-width: 140px;
+            }
         }
         &--color {
-            width: 150px;
+            @include media-breakpoint-up(xl) {
+                width: 150px;
+            }
             .filter__sublist {
                 min-width: 284px;
             }
         }
         &--season {
-            min-width: 125px;
+            @include media-breakpoint-up(xl) {
+                min-width: 125px;
+            }
         }
         &--collection {
-            min-width: 160px;
+            @include media-breakpoint-up(xl) {
+                min-width: 160px;
+            }
         }
         &--cost {
-            min-width: 120px;
+            @include media-breakpoint-up(xl)  {
+                min-width: 120px;
+            }
             .filter__sublist {
                 min-width: 304px;
             }
         }
         &--sort {
-            min-width: 120px;
+            width: auto;
+            flex-grow: 1;
             .filter__sublist {
                 right: 0;
                 min-width: 214px;
@@ -64,11 +118,12 @@
             }
             .checkbox input + .checkbox__icon::after,
             .checkbox input:checked + .checkbox__icon::before,
-            .checkbox input:checked + .checkbox__icon::after{
+            .checkbox input:checked + .checkbox__icon::after {
                 display: none;
             }
         }
         &--view-card {
+            width: auto;
             .filter__name {
                 padding: 0;
                 width: 50px;
@@ -79,13 +134,22 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    @include bg($icon-sort-default)
                 }
+            }
+        }
+        &--to-three {
+            .filter__name::before {
+                @include bg($icon-sort-default);
+            }
+        }
+        &--to-two {
+            .filter__name::before {
+                @include bg($icon-to-two);
             }
         }
     }
     &__name {
-        position:relative;
+        position: relative;
         width: 100%;
         padding: 15px 15px;
         vertical-align: top;
@@ -191,7 +255,7 @@
         }
     }
     &__cost-field {
-       width: 86px;
+        width: 86px;
         font-weight: 500;
     }
     &__fields {
@@ -200,16 +264,20 @@
         margin-bottom: 35px;
     }
 }
+
 .ui-slider-horizontal {
     height: 7px;
 }
+
 .ui-widget-header {
     background-color: #7865a4;
     border: 1px solid #c0c1ca;
 }
+
 .ui-corner-all {
     border-radius: 3px;
 }
+
 .ui-slider .ui-slider-handle {
     width: 15px;
     height: 15px;
