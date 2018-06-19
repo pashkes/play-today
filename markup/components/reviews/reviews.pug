@@ -1,0 +1,83 @@
+mixin reviews(data)
+    .reviews
+        .container
+            ul.nav.tabs
+                li.tabs__item
+                    a(data-toggle="tab" href="#tab-2-1").active
+                        span.tabs__text отзывы покупателей
+                        .reviews__score
+                            span 4,5
+                            ul.starts
+                                li.starts__item 1
+                                li.starts__item 1
+                                li.starts__item 1
+                                li.starts__item 1
+                                li.starts__item.starts__item--empty 1
+                li.tabs__item
+                    a(data-toggle="tab" href="#tab-2-2") Вопросы
+            .tabs__content
+                #tab-2-1.tabs__panel.fade.in.active
+                    a(href="#").reviews__write.btn.btn--lg Оставить свой отзыв
+                    ul.reviews__list
+                        li.reviews__item
+                            .row.no-gutters
+                                .col-sm-auto
+                                    ul.starts
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                .col-sm
+                                    .reviews__header
+                                        cite.reviews__author Татьяна Торшина
+                                        span.reviews__time (2 дня назад)
+                                    .reviews__content
+                                        blockquote Крутые сапоги !на мой 36 идеально подошли и по ноге аккуратно смотрятся!
+                                    ul.reviews__photos
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-1")
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-2")
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-3")
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-4")
+
+                        li.reviews__item
+                            .row.no-gutters
+                                .col-sm-auto
+                                    ul.starts
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                        li.starts__item 1
+                                .col-sm
+                                    .reviews__header
+                                        cite.reviews__author Непочатова Марина
+                                        span.reviews__time (4 недели назад)
+                                    .reviews__content
+                                        blockquote Сапоги просто бомба! Идут в размер, на свой 36 (23см),идеально подошел 36
+                                            | размер, ноги у меня худые и сидят один-в-один как на модели. Сапоги сочетаются
+                                            | абсолютно со всеми стилями в одежде. Качество на высшем уровне! Берите и не пожалеете!
+                                    ul.reviews__photos
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-1")
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-2")
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-3")
+                                        li.reviews__photo
+                                            a(href="#")
+                                                img(src="" width="80" height="100" alt="review-4")
+
+                #tab-2-2.tabs__panel.fade.in
+                    p some questions

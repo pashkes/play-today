@@ -1,0 +1,58 @@
+.slider-large {
+    position: relative;
+    padding-left: 70px;
+    min-height: 290px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-left: 150px;
+    }
+    &__nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        @include media-breakpoint-up(xl) {
+            width: 120px;
+        }
+    }
+    .slick-arrow {
+        position: relative;
+        border: none;
+        padding: 0;
+        font-size: 0;
+        height: 64px;
+        width: 100%;
+        background-color: transparent;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.slick-prev {
+            &::before {
+                top: 0;
+                @include bg($icon-arrow-top);
+            }
+        }
+        &.slick-next {
+            &::before {
+                bottom: 0;
+                @include bg($icon-arrow-bootom);
+            }
+        }
+    }
+    &__tags {
+        position: absolute;
+        top: 26px;
+        right: 15px;
+        text-align: right;
+        z-index: 1;
+        .tags__item {
+            margin-bottom: 18px;
+        }
+    }
+}

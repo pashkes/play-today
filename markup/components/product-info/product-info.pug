@@ -1,0 +1,97 @@
+mixin product-info(data)
+    .product-info
+        .row.align-items-sm-center
+            .col-sm-8
+                h2.product-info__title куртка для девочки
+            .col-sm-auto.ml-auto
+                a(href="catalog.html").product-info__back назад в каталог
+        .row
+            .col-12
+                span.product-info__articul Артикул 188006
+                .product-info__costs
+                    span.product-info__cost.product-info__cost--new 1 799.-
+                    span.product-info__cost.product-info__cost--old 3 899.-
+                .product-info__promocod
+                    span.product-info__label-promocod Скидка 30% по промокоду
+
+        .product-info__select-sizes
+            .row.justify-content-xl-between.align-items-md-center
+                .col-md-9
+                    .sizes
+                        span.sizes__title.sizes__title--xl выберите размер
+                        .sizes__list
+                            label.sizes__item
+                                input(type="radio" name="size-2").sizes__radio
+                                span 104
+                            label.sizes__item
+                                input(type="radio" name="size-2" checked).sizes__radio
+                                span 110
+                            label.sizes__item
+                                input(type="radio" name="size-2").sizes__radio
+                                span 112
+                            label.sizes__item
+                                input(type="radio" name="size-2" disabled).sizes__radio
+                                span 116
+                            label.sizes__item
+                                input(type="radio" name="size-2" disabled).sizes__radio
+                                span 122
+                            label.sizes__item
+                                input(type="radio" name="size-2" disabled).sizes__radio
+                                span 128
+                .col-md-3
+                    a(href="#").product-info__table-size.btn-underline
+                        span Таблица размеров
+
+        .product-info__bonus
+            .row.no-gutters.align-items-sm-end
+                .col-sm-auto
+                    span.product-info__back-card Вернется на бонусную карту
+                .col-sm-auto
+                    img(src="%=static=%img/general/bonus-card.png" width="113" height="25" alt="bonus card")
+                    span.product-info__total-discount 35.-
+        .product-info__btns-pay
+            .row.no-gutters.align-items-sm-end
+                .col-sm-auto
+                    a(href="#").product-info__free-delivery.btn-underline
+                        span Бесплатная доставка*
+                    button(type="button" data-toggle="modal" data-target="#add-cart").product-info__pay.btn.btn--icon.btn--lg
+                        span купить
+                .col-sm-auto
+                    button(type="button").product-info__pay.btn.btn--lg купить в 1 клик
+                .col-sm-auto
+                    a(href="#").product-info__favorite Добавить в список желаний
+        ul.nav.tabs
+            li.tabs__item
+                a(data-toggle="tab" href="#tab-1").active Описание
+            li.tabs__item
+                a(data-toggle="tab" href="#tab-2") Наличие в магазинах
+            li.tabs__item
+                a(data-toggle="tab" href="#tab-3") особенности модели
+        .tabs__content
+            #tab-1.tabs__panel.fade.in.active
+                p Утепленная стеганая куртка выполнена из водонепроницаемой ткани. Модель на молнии. Специальный карман для фиксации "бегунка" не позволит застежке травмировать нежную детскую кожу.
+                table.product-info__technical
+                    tbody
+                        tr
+                            td.product-info__characteristic Артикул
+                            td 188006
+                        tr
+                            td.product-info__characteristic Цвет
+                            td
+                                span.product-info__current-color Мультиколор (белый, красный, голубой)
+                        tr
+                            td.product-info__characteristic состав
+                            td 68% хлопок, 26% полиэстер, 4% вискоза, 2% эластан
+                        tr
+                            td.product-info__characteristic Сезон
+                            td Весна
+                        tr
+                            td.product-info__characteristic коллекция
+                            td утро в париже
+            #tab-2.tabs__panel.fade
+                p Some content.
+            #tab-3.tabs__panel.fade
+                p Some content.
+
+
+

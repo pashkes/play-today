@@ -15,6 +15,10 @@ html(class="no-js", lang="ru")
         +head(head.defaults)
 
     body
+        a(href="#").advert
+            span.advert__text на весеннюю коллекцию
+            span.advert__discount -25%
+            span.advert__text Бесплатная доставка от 4 000.-
         +header()
         .page-catalog
             .container
@@ -210,7 +214,7 @@ html(class="no-js", lang="ru")
                                                             span.checkbox__icon
                                                             span.filter__element сначала новые
                                             li.filter__item.filter__item--view-card.filter__item--to-two
-                                                button(type="button").filter__name
+                                                a(href="catalog.html").filter__name
 
                         .catalog
                             .row.no-gutters.justify-content-xl-between

@@ -50,3 +50,38 @@ h2 {
 .ml-auto {
     margin-left: auto;
 }
+.advert {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    background-color: #171518;
+    color: #fff;
+    @include media-breakpoint-up(sm) {
+        display: flex;
+    }
+    &__discount {
+        margin-right: 38px;
+        margin-left: 38px;
+        color: #ffffff;
+        font-size: 40px;
+        letter-spacing: 0.28px;
+        line-height: 1;
+        font-family: Bebas;
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+    &:hover {
+        color: #fff;
+    }
+}
+.single-product {
+    padding-top: 50px;
+}
+

@@ -1,0 +1,88 @@
+.reviews {
+    &__write {
+        min-width: 237px;
+        margin-bottom: 22px;
+    }
+    .tabs{
+        border-bottom: none;
+    }
+    .tabs__content {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    &__score {
+        display: flex;
+        align-items: center;
+        padding-left: 33px;
+        span {
+            margin-right: 10px;
+            color: $primary;
+            font-size: 18px;
+            line-height: 0.9;
+        }
+    }
+    .tabs__item {
+        a {
+            padding-right: 39px;
+            padding-left: 39px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__item {
+        padding-top: 34px;
+        padding-bottom: 37px;
+        border-bottom: 1px solid #f1f1f3;
+        &:last-child {
+            border-bottom: none;
+        }
+        .starts {
+            margin-top: 7px;
+            margin-right: 21px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 5px;
+    }
+    &__author {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    &__time {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 2px;
+        color: #adabae;
+        font-size: 14px;
+    }
+    &__content {
+        font-weight: 400;
+        font-size: 14px;
+    }
+    &__photos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__photo {
+        margin-right: 10px;
+        margin-top: 5px;
+        background-color: #e5e7ee;
+        width: 80px;
+        height: 100px;
+        img {
+            width: 80px;
+            height: 100px;
+        }
+    }
+
+}

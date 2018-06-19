@@ -1,0 +1,24 @@
+.some-products {
+    padding-top: 114px;
+    .tabs {
+        display: flex;
+        border-bottom: none;
+    }
+    &__footer {
+        padding-bottom: 48px;
+        text-align: center;
+    }
+    .tabs__panel {
+        .row {
+            margin-right: -14px;
+            margin-left: -14px;
+        }
+        div[class*="col"] {
+            padding-right: 14px;
+            padding-left: 14px;
+        }
+    }
+    .product-card {
+        margin-bottom: 30px;
+    }
+}

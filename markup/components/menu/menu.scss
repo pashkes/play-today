@@ -56,7 +56,7 @@
         opacity: 0;
         background-color: rgba(#fff, .8);
         transition: $transition-base;
-        z-index: 1;
+        z-index: 3;
         overflow: hidden;
         &::before {
             content: '';
@@ -100,8 +100,17 @@
     }
 }
 
-.header.show {
+.home-header .header.show {
     background-color: rgba(#fff, .8);
+    .menu__sub-wrapper {
+        background-color: rgba(#fff, .8);
+    }
+}
+.header.show {
+    background-color: #F0F3F9;
+    .menu__sub-wrapper {
+        background-color: #F0F3F9;
+    }
     .menu__link--icon.up::before {
         @include bg($icon-arrow-up)
     }

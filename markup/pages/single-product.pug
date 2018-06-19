@@ -3,36 +3,38 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head.pug
     include ../components/header/header.pug
+    include ../components/promo/promo.pug
     include ../components/modal-location/modal-location.pug
+    include ../components/banners/banners.pug
+    include ../components/novelties/novelties.pug
     include ../components/subscribe/subscribe.pug
     include ../components/footer/footer.pug
-    include ../components/categories/categories.pug
-    include ../components/catalog/catalog.pug
-    include ../components/filter/filter.pug
     include ../components/choose-size/choose-size.pug
     include ../components/add-cart/add-cart.pug
+    include ../components/slider-large/slider-large.pug
+    include ../components/product-info/product-info.pug
+    include ../components/some-products/some-products.pug
+    include ../components/reviews/reviews.pug
+
     head
         +head(head.defaults)
 
-    body
-        .advert
-            span.advert__text на весеннюю коллекцию
-            span.advert__discount -25%
-            span.advert__text Бесплатная доставка от 4 000.-
+    body.page
         +header()
-        .page-catalog
+        .single-product
             .container
-                .row.no-gutters
-                    .col-sm-6.col-md-5.col-xl-2
-                        +categories()
-                    .col-sm-6.col-md-7.col-xl-10
-                        +filter()
-                        +catalog()
+                .row
+                    .col-lg-7
+                        +slider-large()
+                    .col-lg-5
+                        +product-info()
+            +some-products()
+            +reviews()
+
         +subscribe()
         +footer()
         //- Main scripts. You can replace it, but I recommend you to leave it here
         +modal-location()
         +choose-size()
         +add-cart
-        .modal-backdrop.fade
         script(src='%=static=%js/main%=hash=%%=min=%.js')
