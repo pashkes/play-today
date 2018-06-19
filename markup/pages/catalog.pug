@@ -15,7 +15,7 @@ html(class="no-js", lang="ru")
         +head(head.defaults)
 
     body
-        .advert
+        a(href="#").advert
             span.advert__text на весеннюю коллекцию
             span.advert__discount -25%
             span.advert__text Бесплатная доставка от 4 000.-
@@ -35,4 +35,4 @@ html(class="no-js", lang="ru")
         +choose-size()
         +add-cart
         .modal-backdrop.fade
-        script(src='%=static=%js/main%=hash=%%=min=%.js')
+        script(src='%=static=%js/main%=hash=%.js')

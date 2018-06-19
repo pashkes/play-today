@@ -57,7 +57,7 @@ h2 {
     padding: 5px 0;
     background-color: #171518;
     color: #fff;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
         display: flex;
     }
     &__discount {

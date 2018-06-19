@@ -4,13 +4,19 @@ mixin banners(data)
             ul.banners__slider.js-banner-slide
                 li.banners__slide
                     a(href="#").banners__url
-                        img(src="%=static=%img/content/banner-1.jpg" width="400" height="400")
+                        picture
+                            //source(media="(min-width: 768px)" srcset="%=static=%img/content/banner-1-md.jpg")
+                            img(src="%=static=%img/content/banner-1.jpg" width="400" height="400")
                 li.banners__slide
                     a(href="#").banners__url
-                        img(src="%=static=%img/content/banner-2.jpg" width="400" height="400")
+                        picture
+                            //source(media="(min-width: 768px)" srcset="%=static=%img/content/banner-2-md.jpg")
+                            img(src="%=static=%img/content/banner-2.jpg" width="400" height="400")
                 li.banners__slide
                     a(href="#").banners__url
-                        img(src="%=static=%img/content/banner-3.jpg" width="400" height="400")
+                        picture
+                            //source(media="(min-width: 768px)" srcset="%=static=%img/content/banner-3-md.jpg")
+                            img(src="%=static=%img/content/banner-3.jpg" width="400" height="400")
                     .banners__buttons
                         a(href="#").banners__link мальчики
                         a(href="#").banners__link девочки

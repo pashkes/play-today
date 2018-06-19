@@ -5,7 +5,7 @@
         slidesToShow: 2,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 3,
                 }
@@ -17,10 +17,10 @@
                 }
             },
             {
-            breakpoint: 1400,
+            breakpoint: 1344,
             settings: {
                 slidesToShow: 5,
-                variableWidth: true
+                // variableWidth: true
             }
         }]
     });

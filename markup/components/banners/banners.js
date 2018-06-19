@@ -7,9 +7,10 @@
         initialSlide: 2,
         responsive: [
             {
-                breakpoint: 576,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
+                    initialSlide: 1,
                 }
             },
             {
