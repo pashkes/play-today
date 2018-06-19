@@ -37,9 +37,46 @@
         }
     }
     &__promocod {
+        position:relative;
         padding-bottom: 12px;
         border-bottom: 1px solid #f1f1f3;
     }
+    &__tooltip {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 297px;
+        z-index: 3;
+        visibility: hidden;
+        opacity: 0;
+        transition: $transition-base;
+        @include media-breakpoint-up(lg) {
+            top: -30px;
+            left: initial;
+            right: calc(100% + 30px);
+        }
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            transform: none;
+        }
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: -7px;
+            left: 20px;
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg);
+            background-color:#fff;
+            @include media-breakpoint-up(lg) {
+                top: 34px;
+                left: initial;
+                right: -7px;
+            }
+        }
+    }
+
     &__label-promocod {
         padding: 4px 8px;
         text-align: center;
@@ -150,4 +187,5 @@
             @include bg($icon-label-color);
         }
     }
+
 }

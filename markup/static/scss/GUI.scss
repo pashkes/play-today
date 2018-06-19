@@ -325,7 +325,7 @@ a {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid #f1f1f3;
+    box-shadow: inset 0 -1px 0 0 #f1f1f3;
     overflow-x: auto;
     overflow-y: hidden;
     &__item {
@@ -358,7 +358,7 @@ a {
                     height: 1px;
                     right: 0;
                     left: 0;
-                    bottom: -1px;
+                    bottom: 0;
                     background-color: #fff;
                 }
             }
@@ -398,5 +398,58 @@ a {
         &--empty {
             @include bg($icon-star-empty)
         }
+    }
+}
+.tooltip-product {
+    position:relative;
+    padding: 20px 17px 18px;
+    text-align: center;
+    filter: drop-shadow(0 0 6px rgba(2, 3, 3, 0.24));
+    background-color: #ffffff;
+
+    &__total {
+        display: block;
+        margin-bottom: 10px;
+        color: #e12931;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 500;
+    }
+    &__desc {
+        margin-bottom: 25px;
+        line-height: 1.4;
+        strong {
+            padding-left: 5px;
+            font-weight: 700;
+            line-height: 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
+    &__btn {
+        margin-bottom: 13px;
+    }
+    &__time {
+        margin-bottom: 8px;
+        span {
+            position:relative;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 32px;
+            color: #e12931;
+            font-weight: 400;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                @include bg($icon-clock)
+            }
+        }
+    }
+    &__all-product {
+        text-decoration: underline;
+        font-weight: 400;
     }
 }

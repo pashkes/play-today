@@ -12,7 +12,17 @@ mixin product-info(data)
                     span.product-info__cost.product-info__cost--new 1 799.-
                     span.product-info__cost.product-info__cost--old 3 899.-
                 .product-info__promocod
-                    span.product-info__label-promocod Скидка 30% по промокоду
+                    span.product-info__label-promocod.js-show-tooltip Скидка 30% по промокоду
+                    .product-info__tooltip.tooltip-product.js-tooltip-product
+                        span.tooltip-product__total 472.-
+                        p.tooltip-product__desc Цена с доп. скидкой 30%
+                            | по промокоду
+                            strong жаркое лето
+                        a(href="#").tooltip-product__btn.btn.btn--sm.js-close-tooltip применить промокод в корзине
+                        .tooltip-product__time
+                            span 13 ч 35 м
+                        a(href="#").tooltip-product__all-product Все товары и условия акции
+
 
         .product-info__select-sizes
             .row.justify-content-xl-between.align-items-md-center
