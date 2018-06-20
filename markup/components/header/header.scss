@@ -1,14 +1,40 @@
 .header {
     transition: $transition-base;
+    &.show-menu {
+        .header__inner {
+            transform: translateX(88%);
+            @include media-breakpoint-up(md) {
+                transform: translateX(600px);
+            }
+            @include media-breakpoint-up(lg) {
+                transform: translateX(460px);
+            }
+            @include media-breakpoint-up(xl) {
+                transform: none;
+            }
+        }
+        .header__logo,
+        .header__item--search {
+            display: none;
+            @include media-breakpoint-up(xl) {
+                display: block;
+            }
+        }
+    }
     &__top {
         position: relative;
+        overflow: hidden;
         z-index: 3;
+        @include media-breakpoint-up(xl) {
+            overflow: initial;
+        }
     }
     &__inner {
-        position:relative;
+        position: relative;
         display: flex;
         align-items: center;
         padding-top: 9px;
+        transition: $transition-base;
         @include media-breakpoint-up(md) {
             padding-top: 26px;
         }
@@ -98,7 +124,7 @@
             position: static;
             order: -1;
             @include media-breakpoint-up(xl) {
-                position:relative;
+                position: relative;
                 margin-left: auto;
                 order: 0;
             }
@@ -132,7 +158,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            position:relative;
+            position: relative;
             min-width: 15px;
             z-index: 2;
             &.has-products {
@@ -148,7 +174,7 @@
                 z-index: 1;
             }
             span {
-                position:relative;
+                position: relative;
                 z-index: 3;
                 color: #ffffff;
                 font-size: 10px;
@@ -172,7 +198,7 @@
         opacity: 0;
         transform: translateY(-10px);
         z-index: 4;
-       @media (min-width: 1450px) {
+        @media (min-width: 1450px) {
             right: -32px;
         }
         &::before {

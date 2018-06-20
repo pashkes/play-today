@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>default title</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+        <link href="static/css/mainuvgyli.min.css" rel="stylesheet" type="text/css">
+        <meta property="og:title" content="#{data.title}">
+        <meta property="og:title" content="">
+        <meta property="og:url" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="500">
+        <meta property="og:image:height" content="300">
+        <meta property="twitter:description" content="">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+    </head>
+
+    <body class="page">
+        <header class="header js-header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <button class="header__burder-btn" type="button"><span>show/hide menu</span>
+                        </button>
+                        <div class="header__preferences">
+                            <button class="header__location btn-underline icon" type="button" data-toggle="modal" data-target="#exampleModal"><span>Нижний Новгород</span>
+                            </button>
+                            <div class="header__select-lang">
+                                <select class="js-custom-select">
+                                    <option value="rus" selected>Русский</option>
+                                    <option value="eng">English</option>
+                                    <option value="deu">Deucht</option>
+                                    <option value="fr">French</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a class="header__logo" href="#">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="static/img/general/logo.png">
+                                    <img src="static/img/general/logo-xs.png" width="97" height="28" alt="Play today">
+                            </picture>
+                        </a>
+                        <form class="header__item header__item--search">
+                            <input class="header__field field js-search-field" type="search">
+                            <button class="header__show js-search-show" type="button"></button>
+                        </form>
+                        <a class="header__item header__item--sign-in" href="#"></a>
+                        <a class="header__item header__item--favorite" href="#"></a>
+                        <!-- You need add class .has-products if have products--><a class="header__item header__item--cart" href="#"><span>12</span>
+                <div class="header__tooltip tooltip">Ваша корзина пуста</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <nav class="menu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item js-has-submenu"><a class="menu__link menu__link--icon" href="#">Мальчики</a>
+                            <div class="menu__sub-wrapper js-menu-container">
+                                <div class="container">
+                                    <div class="row justify-content-center justify-content-xl-between">
+                                        <div class="col-xl-3"><span class="menu__title">Одежда</span>
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Верхняя одежда</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны, полукомбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Куртки, ветровки, плащи, пальто</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Пиджаки, жилеты</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джинсы, брюки, шорты</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джемперы, кардиганы, жилеты</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Рубашки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Толстовки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Футболки, майки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Головные уборы, шарфы, перчатки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Чулочно-насочные изделия</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-3"><span class="menu__title">Обувь</span>
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Ботинки, полуботинки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны, полукомбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Кеды, кроссовки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Сандалии</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Сапоги, полусапоги</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джемперы, кардиганы, жилеты</a>
+                                                </li>
+                                            </ul><a href="#"><span class="menu__title">Аксессуары</span></a>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <div class="menu__last-list"><span class="menu__title">Возвраст</span>
+                                                <ul class="menu__sub">
+                                                    <li class="menu__item-second"><a class="menu__link-second" href="#">Мальчики 9 мес - 3 года</a>
+                                                    </li>
+                                                    <li class="menu__item-second"><a class="menu__link-second" href="#">Мальчики 4-12 лет</a>
+                                                    </li>
+                                                </ul><span class="menu__title">Теги</span>
+                                                <ul class="menu__tags tags">
+                                                    <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--yellow"><a href="#">любимые герои</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--pink"><a href="#">новинка</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--blue"><a href="#">лето 2018</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--red"><a href="#">хит продаж</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item js-has-submenu"><a class="menu__link menu__link--icon" href="#">Девочки</a>
+                            <div class="menu__sub-wrapper js-menu-container">
+                                <div class="container">
+                                    <div class="row justify-content-xl-between">
+                                        <div class="col-xl-3"><span class="menu__title">Одежда</span>
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Верхняя одежда</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны, полукомбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Куртки, ветровки, плащи, пальто</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Пиджаки, жилеты</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джинсы, брюки, шорты</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джемперы, кардиганы, жилеты</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Рубашки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Толстовки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Футболки, майки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Головные уборы, шарфы, перчатки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Чулочно-насочные изделия</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-3"><span class="menu__title">Обувь</span>
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Ботинки, полуботинки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны, полукомбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Кеды, кроссовки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Сандалии</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Сапоги, полусапоги</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джемперы, кардиганы, жилеты</a>
+                                                </li>
+                                            </ul><a href="#"><span class="menu__title">Аксессуары</span></a>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <div class="menu__last-list"><span class="menu__title">Возвраст</span>
+                                                <ul class="menu__sub">
+                                                    <li class="menu__item-second"><a class="menu__link-second" href="#">Мальчики 9 мес - 3 года</a>
+                                                    </li>
+                                                    <li class="menu__item-second"><a class="menu__link-second" href="#">Мальчики 4-12 лет</a>
+                                                    </li>
+                                                </ul><span class="menu__title">Теги</span>
+                                                <ul class="menu__tags tags">
+                                                    <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--yellow"><a href="#">любимые герои</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--pink"><a href="#">новинка</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--blue"><a href="#">лето 2018</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--red"><a href="#">хит продаж</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item js-has-submenu"><a class="menu__link menu__link--icon" href="#">Новорожденные</a>
+                            <div class="menu__sub-wrapper js-menu-container">
+                                <div class="container">
+                                    <div class="row justify-content-xl-between">
+                                        <div class="col-xl-3"><span class="menu__title">Одежда</span>
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Верхняя одежда</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны, полукомбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Куртки, ветровки, плащи, пальто</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Пиджаки, жилеты</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джинсы, брюки, шорты</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джемперы, кардиганы, жилеты</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Рубашки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Толстовки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Футболки, майки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Головные уборы, шарфы, перчатки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Чулочно-насочные изделия</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-3"><span class="menu__title">Обувь</span>
+                                            <ul class="menu__sub">
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Ботинки, полуботинки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Комбинезоны, полукомбинезоны</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Кеды, кроссовки</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Сандалии</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Сапоги, полусапоги</a>
+                                                </li>
+                                                <li class="menu__item-second"><a class="menu__link-second" href="#">Джемперы, кардиганы, жилеты</a>
+                                                </li>
+                                            </ul><a href="#"><span class="menu__title">Аксессуары</span></a>
+                                        </div>
+                                        <div class="col-xl-3">
+                                            <div class="menu__last-list"><span class="menu__title">Возвраст</span>
+                                                <ul class="menu__sub">
+                                                    <li class="menu__item-second"><a class="menu__link-second" href="#">Мальчики 9 мес - 3 года</a>
+                                                    </li>
+                                                    <li class="menu__item-second"><a class="menu__link-second" href="#">Мальчики 4-12 лет</a>
+                                                    </li>
+                                                </ul><span class="menu__title">Теги</span>
+                                                <ul class="menu__tags tags">
+                                                    <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--yellow"><a href="#">любимые герои</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--pink"><a href="#">новинка</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--blue"><a href="#">лето 2018</a>
+                                                    </li>
+                                                    <li class="tags__item tags__item--red"><a href="#">хит продаж</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu__item"><a class="menu__link" href="#">Распродажа</a>
+                        </li>
+                        <li class="menu__item"><a class="menu__link" href="#">Мишка playtoday</a>
+                        </li>
+                        <li class="menu__item"><a class="menu__link" href="#">Пляжная одежда</a>
+                        </li>
+                        <li class="menu__item"><a class="menu__link" href="#">В школу</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="single-product">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="slider-large">
+                            <ul class="slider-large__tags tags">
+                                <li class="tags__item tags__item--pink"><a href="#">новинка</a>
+                                </li>
+                                <li class="tags__item tags__item--yellow"><a href="#">хит сезона</a>
+                                </li>
+                            </ul>
+                            <ul class="slider-large__view js-main-slider-lg">
+                                <li class="slider-large__slide">
+                                    <img src="static/img/content/product-card-large.jpg" width="610" height="758" alt="куртка для девочки">
+                                </li>
+                                <li class="slider-large__slide">
+                                    <img src="static/img/content/product-card-large.jpg" width="610" height="758" alt="куртка для девочки">
+                                </li>
+                                <li class="slider-large__slide">
+                                    <img src="static/img/content/product-card-large.jpg" width="610" height="758" alt="куртка для девочки">
+                                </li>
+                                <li class="slider-large__slide">
+                                    <img src="static/img/content/product-card-large.jpg" width="610" height="758" alt="куртка для девочки">
+                                </li>
+                                <li class="slider-large__slide">
+                                    <img src="static/img/content/product-card-large.jpg" width="610" height="758" alt="куртка для девочки">
+                                </li>
+                            </ul>
+                            <ul class="slider-large__nav js-nav-slider">
+                                <li class="slider-large__item">
+                                    <img src="static/img/content/product-card-small-1.jpg" width="120" height="150" alt="product-mini-1">
+                                </li>
+                                <li class="slider-large__item">
+                                    <img src="static/img/content/product-card-small-2.jpg" width="120" height="150" alt="product-mini-2">
+                                </li>
+                                <li class="slider-large__item">
+                                    <img src="static/img/content/product-card-small-3.jpg" width="120" height="150" alt="product-mini-3">
+                                </li>
+                                <li class="slider-large__item">
+                                    <img src="static/img/content/product-card-small-4.jpg" width="120" height="150" alt="product-mini-4">
+                                </li>
+                                <li class="slider-large__item">
+                                    <img src="static/img/content/product-card-small-4.jpg" width="120" height="150" alt="product-mini-4">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="product-info">
+                            <div class="row align-items-sm-center">
+                                <div class="col-sm-8">
+                                    <h2 class="product-info__title">куртка для девочки</h2>
+                                </div>
+                                <div class="col-sm-auto ml-auto"><a class="product-info__back" href="catalog.html">назад в каталог</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><span class="product-info__articul">Артикул 188006</span>
+                                    <div class="product-info__costs"><span class="product-info__cost product-info__cost--new">1 799.-</span><span class="product-info__cost product-info__cost--old">3 899.-</span>
+                                    </div>
+                                    <div class="product-info__promocod"><span class="product-info__label-promocod js-show-tooltip">Скидка 30% по промокоду</span>
+                                        <div class="product-info__tooltip tooltip-product js-tooltip-product"><span class="tooltip-product__total">472.-</span>
+                                            <p class="tooltip-product__desc">
+                                                Цена с доп. скидкой 30%по промокоду<strong>жаркое лето</strong>
+                                            </p><a class="tooltip-product__btn btn btn--sm js-close-tooltip" href="#">применить промокод в корзине</a>
+                                            <div class="tooltip-product__time"><span>13 ч 35 м</span>
+                                            </div><a class="tooltip-product__all-product" href="#">Все товары и условия акции</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__select-sizes">
+                                <div class="row justify-content-xl-between align-items-md-center">
+                                    <div class="col-md-9">
+                                        <div class="sizes"><span class="sizes__title sizes__title--xl">выберите размер</span>
+                                            <div class="sizes__list">
+                                                <label class="sizes__item">
+                                                    <input class="sizes__radio" type="radio" name="size-2"><span>104</span>
+                                                </label>
+                                                <label class="sizes__item">
+                                                    <input class="sizes__radio" type="radio" name="size-2" checked><span>110</span>
+                                                </label>
+                                                <label class="sizes__item">
+                                                    <input class="sizes__radio" type="radio" name="size-2"><span>112</span>
+                                                </label>
+                                                <label class="sizes__item">
+                                                    <input class="sizes__radio" type="radio" name="size-2" disabled><span>116</span>
+                                                </label>
+                                                <label class="sizes__item">
+                                                    <input class="sizes__radio" type="radio" name="size-2" disabled><span>122</span>
+                                                </label>
+                                                <label class="sizes__item">
+                                                    <input class="sizes__radio" type="radio" name="size-2" disabled><span>128</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3"><a class="product-info__table-size btn-underline" href="#"><span>Таблица размеров</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__bonus">
+                                <div class="row no-gutters align-items-sm-end">
+                                    <div class="col-sm-auto"><span class="product-info__back-card">Вернется на бонусную карту</span>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <img src="static/img/general/bonus-card.png" width="113" height="25" alt="bonus card"><span class="product-info__total-discount">35.-</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-info__btns-pay">
+                                <div class="row no-gutters align-items-sm-end">
+                                    <div class="col-sm-auto"><a class="product-info__free-delivery btn-underline" href="#"><span>Бесплатная доставка*</span></a>
+                                        <button class="product-info__pay btn btn--icon btn--lg" type="button" data-toggle="modal" data-target="#add-cart"><span>купить</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <button class="product-info__pay btn btn--lg" type="button">купить в 1 клик</button>
+                                    </div>
+                                    <div class="col-sm-auto"><a class="product-info__favorite" href="#">Добавить в список желаний</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="nav tabs">
+                                <li class="tabs__item"><a class="active" data-toggle="tab" href="#tab-1">Описание</a>
+                                </li>
+                                <li class="tabs__item"><a data-toggle="tab" href="#tab-2">Наличие в магазинах</a>
+                                </li>
+                                <li class="tabs__item"><a data-toggle="tab" href="#tab-3">особенности модели</a>
+                                </li>
+                            </ul>
+                            <div class="tabs__content">
+                                <div class="tabs__panel fade in active" id="tab-1">
+                                    <p>Утепленная стеганая куртка выполнена из водонепроницаемой ткани. Модель на молнии. Специальный карман для фиксации "бегунка" не позволит застежке травмировать нежную детскую кожу.</p>
+                                    <table class="product-info__technical">
+                                        <tbody>
+                                            <tr>
+                                                <td class="product-info__characteristic">Артикул</td>
+                                                <td>188006</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-info__characteristic">Цвет</td>
+                                                <td><span class="product-info__current-color">Мультиколор (белый, красный, голубой)</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-info__characteristic">состав</td>
+                                                <td>68% хлопок, 26% полиэстер, 4% вискоза, 2% эластан</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-info__characteristic">Сезон</td>
+                                                <td>Весна</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-info__characteristic">коллекция</td>
+                                                <td>утро в париже</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tabs__panel fade" id="tab-2">
+                                    <p>Some content.</p>
+                                </div>
+                                <div class="tabs__panel fade" id="tab-3">
+                                    <p>Some content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="some-products">
+                <div class="container">
+                    <ul class="nav tabs">
+                        <li class="tabs__item"><a class="active" data-toggle="tab" href="#tab-1-1">Товары в комплект</a>
+                        </li>
+                        <li class="tabs__item"><a data-toggle="tab" href="#tab-1-2">Недавно смотрели</a>
+                        </li>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel fade in active" id="tab-1-1">
+                            <div class="row justify-content-center justify-content-sm-start">
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-1.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Толстовка для девочки</a></h3>
+                                            <p class="product-card__cost">499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-2.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Комплект для девочки</a></h3>
+                                            <p class="product-card__cost">2499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--pink"><a href="#">весна 2018</a>
+                                                </li>
+                                                <li class="tags__item tags__item--green"><a href="#">новинка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-3.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Толстовка</a></h3>
+                                            <p class="product-card__cost">1499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--yellow"><a href="#">хит сезона</a>
+                                                </li>
+                                                <li class="tags__item tags__item--blue"><a href="#">Лучшая цена</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-4.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Толстовка</a></h3>
+                                            <p class="product-card__cost">1499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-5.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Комплект для девочки</a></h3>
+                                            <p class="product-card__cost">499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--blue"><a href="#">Лучшая цена</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__panel fade" id="tab-1-2">
+                            <div class="row no-gutters">
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-1.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Толстовка для девочки</a></h3>
+                                            <p class="product-card__cost">499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-2.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Комплект для девочки</a></h3>
+                                            <p class="product-card__cost">2499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--pink"><a href="#">весна 2018</a>
+                                                </li>
+                                                <li class="tags__item tags__item--green"><a href="#">новинка</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-3.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Толстовка</a></h3>
+                                            <p class="product-card__cost">1499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--yellow"><a href="#">хит сезона</a>
+                                                </li>
+                                                <li class="tags__item tags__item--blue"><a href="#">Лучшая цена</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-4.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Толстовка</a></h3>
+                                            <p class="product-card__cost">1499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--green"><a href="#">весна 2018</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-auto">
+                                    <div class="product-card">
+                                        <a class="product-card__img" href="#">
+                                            <img src="static/img/content/main-card-5.jpg" width="240" height="400" alt="Коплект для девочки">
+                                        </a>
+                                        <div class="product-card__info">
+                                            <h3 class="product-card__title"><a href="#">Комплект для девочки</a></h3>
+                                            <p class="product-card__cost">499 руб</p>
+                                            <ul class="product__tags tags">
+                                                <li class="tags__item tags__item--blue"><a href="#">Лучшая цена</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="some-products__footer"><a class="btn btn--sm" href="#">Показать еще 20 из 40</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews">
+                <div class="container">
+                    <ul class="nav tabs">
+                        <li class="tabs__item"><a class="active" data-toggle="tab" href="#tab-2-1"><span class="tabs__text">отзывы покупателей</span>
+                  <div class="reviews__score"><span>4,5</span>
+                    <ul class="starts">
+                      <li class="starts__item">1</li>
+                      <li class="starts__item">1</li>
+                      <li class="starts__item">1</li>
+                      <li class="starts__item">1</li>
+                      <li class="starts__item starts__item--empty">1</li>
+                    </ul>
+                  </div></a>
+                        </li>
+                        <li class="tabs__item"><a data-toggle="tab" href="#tab-2-2">Вопросы</a>
+                        </li>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel fade in active" id="tab-2-1"><a class="reviews__write btn btn--lg" href="#">Оставить свой отзыв</a>
+                            <ul class="reviews__list">
+                                <li class="reviews__item">
+                                    <div class="row no-gutters">
+                                        <div class="col-sm-auto">
+                                            <ul class="starts">
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="reviews__header">
+                                                <cite class="reviews__author">Татьяна Торшина</cite><span class="reviews__time">(2 дня назад)</span>
+                                            </div>
+                                            <div class="reviews__content">
+                                                <blockquote>Крутые сапоги !на мой 36 идеально подошли и по ноге аккуратно смотрятся!</blockquote>
+                                            </div>
+                                            <ul class="reviews__photos">
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-1">
+                                                    </a>
+                                                </li>
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-2">
+                                                    </a>
+                                                </li>
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-3">
+                                                    </a>
+                                                </li>
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-4">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="reviews__item">
+                                    <div class="row no-gutters">
+                                        <div class="col-sm-auto">
+                                            <ul class="starts">
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                                <li class="starts__item">1</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="reviews__header">
+                                                <cite class="reviews__author">Непочатова Марина</cite><span class="reviews__time">(4 недели назад)</span>
+                                            </div>
+                                            <div class="reviews__content">
+                                                <blockquote>
+                                                    Сапоги просто бомба! Идут в размер, на свой 36 (23см),идеально подошел 36размер, ноги у меня худые и сидят один-в-один как на модели. Сапоги сочетаются абсолютно со всеми стилями в одежде. Качество на высшем уровне! Берите и не пожалеете!
+                                                </blockquote>
+                                            </div>
+                                            <ul class="reviews__photos">
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-1">
+                                                    </a>
+                                                </li>
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-2">
+                                                    </a>
+                                                </li>
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-3">
+                                                    </a>
+                                                </li>
+                                                <li class="reviews__photo">
+                                                    <a href="#">
+                                                        <img src="static/img/content/140x150.png" width="80" height="100" alt="review-4">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs__panel fade in" id="tab-2-2">
+                            <p>some questions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe">
+            <div class="container">
+                <div class="subscribe__bg">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-auto col-xl-9">
+                            <div class="subscribe__inner">
+                                <p class="subscribe__label">скидка за подписку 10% + бесплатная доставка</p>
+                                <form class="subscribe__form">
+                                    <input class="field subscribe__field" type="email" placeholder="ваш email адрес" required>
+                                    <button class="subscribe__submit btn btn--sm">Подписаться</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer container">
+            <div class="row">
+                <div class="col-md d-none d-md-block footer__col-border">
+                    <div class="footer__inner-col"><strong class="footer__title">о компании</strong>
+                        <ul class="footer__nav">
+                            <li><a class="footer__link" href="#">История</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Дневник PlayToday</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Контакты</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Карьера в PlayToday</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md d-none d-md-block footer__col-border">
+                    <div class="footer__inner-col"><strong class="footer__title">Сотрудничество</strong>
+                        <ul class="footer__nav">
+                            <li><a class="footer__link" href="#">Оптовым партнерам</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Работа по франшизе</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md d-none d-md-block footer__col-border">
+                    <div class="footer__inner-col"><strong class="footer__title">Покупателям</strong>
+                        <ul class="footer__nav">
+                            <li><a class="footer__link" href="#">Программа лояльности</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Условия возврата</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Доставка и оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md d-none d-md-block footer__col-border">
+                    <div class="footer__inner-col"><strong class="footer__title">нужна помощь?</strong>
+                        <ul class="footer__nav">
+                            <li><a class="footer__link" href="tel:+784997077365">8 (499) 707-73-65</a>
+                            </li>
+                            <li><a class="footer__link" href="tel:88005057365">8 (800) 505-73-65</a>
+                            </li>
+                            <li><a class="footer__link" href="#">Доставка и оплата</a>
+                            </li>
+                            <li><a class="footer__link footer__title" href="#">наши магазины</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md footer__col-border d-none d-xl-block">
+                    <div class="footer__inner-col">
+                        <div class="footer__pay d-none d-md-block"><strong class="footer__title">Мы принимаем</strong>
+                            <img src="static/img/general/visa.png" width="48" height="55" alt="visa pay">
+                            <img src="static/img/general/master-card.png" width="38" height="26" alt="visa pay">
+                        </div>
+                        <div class="footer__social"><strong class="footer__title">Присоединяйся</strong>
+                            <ul class="social">
+                                <li class="social__item"><a class="social__link social__link--vk" href="#">vkontakte</a>
+                                </li>
+                                <li class="social__item"><a class="social__link social__link--insta" href="#">instagram</a>
+                                </li>
+                                <li class="social__item"><a class="social__link social__link--fb" href="#">facebook</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-md-none"><a class="footer__follow-main-site btn btn--icon" href="#">Перейти на основной сайт</a>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <p><a href="#">Политика конфиденциальности</a>&#169; 2004-2018 Интернет-магазин детской одежды Playtoday</p>
+            </div>
+        </footer>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal__content location">
+                    <div class="modal__header"><span class="modal__title">ваш регион доставки</span>
+                        <button class="btn-close modal__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal__body">
+                        <div class="location__city">
+                            <select class="location__search js-cityes-list">
+                                <option>Москва</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Екатеринбург</option>
+                                <option>Новосибирск</option>
+                                <option>Ростов-на-Дону</option>
+                                <option>Уфа</option>
+                            </select>
+                            <button class="btn-underline" type="button"><span>Определить автоматически</span>
+                            </button>
+                        </div><span class="location__title-cities">Популярные города</span>
+                        <ul class="location__popular">
+                            <li class="location__item"><a href="#">Москва</a>
+                            </li>
+                            <li class="location__item"><a href="#">Санкт-Петербург</a>
+                            </li>
+                            <li class="location__item"><a href="#">Екатеринбург</a>
+                            </li>
+                            <li class="location__item"><a href="#">Новосибирск</a>
+                            </li>
+                            <li class="location__item"><a href="#">Ростов-на-Дону</a>
+                            </li>
+                            <li class="location__item"><a href="#">Уфа</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal__footer">
+                        <button class="modal__save btn btn--sm" type="button" data-dismiss="modal">Запомнить выбор</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choose-size modal fade" tabindex="-1" id="choose-modal" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal__content location">
+                    <div class="modal__header"><span class="modal__title">Выберите размер</span>
+                        <button class="btn-close modal__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal__body choose-size__body">
+                        <div class="choose-size__inner">
+                            <div class="choose-size__size sizes">
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1"><span>104</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1" checked><span>110</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1"><span>112</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1" disabled><span>116</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1" disabled><span>122</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1" disabled><span>128</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1"><span>134</span>
+                                </label>
+                                <label class="sizes__item">
+                                    <input class="sizes__radio" type="radio" name="size-1"><span>146</span>
+                                </label>
+                            </div><a class="choose-size__table btn-underline" href="#" target="_blank"><span>Таблица размеров</span></a>
+                        </div>
+                    </div>
+                    <div class="modal__footer choose-size__footer">
+                        <button class="choose-size__btn btn btn--lg btn--darken js-add-cart" type="button">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add-cart modal fade" tabindex="-1" id="add-cart" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal__content">
+                    <div class="modal__header add-cart__header"><span class="modal__title">Товар добавлен в корзину</span>
+                        <p class="add-cart__text">Всего в вашей корзине 1 товар.<a href="#">Просмотреть</a>
+                        </p>
+                        <button class="btn-close modal__close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal__body add-cart__body">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="add-cart__photo" src="static/img/content/product-mini.jpg" alt="Куртка" width="100" height="100">
+                                <div class="add-cart__info">
+                                    <h3 class="add-cart__name">Куртка</h3><span class="add-cart__articul">Артикул 182059</span>
+                                    <p class="add-cart__size">Размер<span>98/104</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-auto ml-auto">
+                                <div class="add-cart__price"><span class="add-cart__cost">3 998.-</span><span class="add-cart__amount">1 шт.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__footer add-cart__footer">
+                        <button class="add-cart__btn btn btn--lg" type="button" data-dismiss="modal" aria-label="Close">Продолжить покупки</button><a class="add-cart__btn btn btn--lg btn--darken" href="#">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="static/js/mainuvgyli.js"></script>
+    </body>
+
+</html>

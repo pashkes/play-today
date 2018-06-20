@@ -1,5 +1,6 @@
 .footer {
     padding-top: 30px;
+    overflow: hidden;
     @include media-breakpoint-up(md) {
         padding-top: 34px;
     }

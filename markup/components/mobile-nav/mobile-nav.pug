@@ -1,0 +1,85 @@
+mixin mobile-nav(data)
+    .mobile-nav.js-mobile-nav
+        .mobile-nav__wrapper
+            .mobile-nav__scroll-block
+                ul.mobile-nav__tabs.nav.nav-tabs
+                    li.mobile-nav__tab
+                        a(href="#boys" data-toggle="pill" role="tab" aria-controls="boys" aria-selected="true").active Мальчики
+                    li.mobile-nav__tab
+                        a(href="#girls" data-toggle="pill" role="tab" aria-controls="girls" aria-selected="true") Девочки
+
+                .mobile-nav__contents
+                    div(role="tabpanel" aria-labelledby="nav-boys-tab").mobile-nav__content#boys.fade.show.active
+                        ul.mobile-nav__list.mobile-nav__list--main.js-main-menu
+                            li.mobile-nav__item
+                                a(href="#" data-category="1").mobile-nav__link.mobile-nav__link--has-submenu Аксессуары
+                            li.mobile-nav__item
+                                a(href="#" data-category="2").mobile-nav__link.mobile-nav__link--has-submenu Одежда
+                            li.mobile-nav__item
+                                a(href="#" data-category="3").mobile-nav__link.mobile-nav__link--has-submenu Обувь
+                            li.mobile-nav__item
+                                a(href="#").mobile-nav__link Одежда
+                        div(data-category="1").mobile-nav__submenu-wrapper.js-mobile-submenu
+                            button(type="button").mobile-nav__back.js-come-back Аксессуары
+                            ul.mobile-nav__list
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Разное
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Ремни, подтяжки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Рюкзаки, сумки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Солнцезащитные очки
+                        div(data-category="2").mobile-nav__submenu-wrapper.js-mobile-submenu
+                            button(type="button").mobile-nav__back.js-come-back Аксессуары
+                            ul.mobile-nav__list
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Разное
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Ремни, подтяжки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Рюкзаки, сумки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Солнцезащитные очки
+                        div(data-category="3").mobile-nav__submenu-wrapper.js-mobile-submenu
+                            button(type="button").mobile-nav__back.js-come-back Аксессуары
+                            ul.mobile-nav__list
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Разное
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Ремни, подтяжки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Рюкзаки, сумки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Солнцезащитные очки
+
+                    div(role="tabpanel" aria-labelledby="nav-girls-tab").mobile-nav__content#girls.fade
+                        ul.mobile-nav__list
+                            li.mobile-nav__item
+                                a(href="#").mobile-nav__link.mobile-nav__link--has-submenu Аксессуары
+                            li.mobile-nav__item
+                                a(href="#").mobile-nav__link.mobile-nav__link--has-submenu Одежда
+                            li.mobile-nav__item
+                                a(href="#").mobile-nav__link.mobile-nav__link--has-submenu Обувь
+                            li.mobile-nav__item
+                                a(href="#").mobile-nav__link Одежда
+                .mobile-nav__footer
+                    ul.mobile-nav__list.mobile-nav__list--dark
+                        li.mobile-nav__item
+                            a(href="#").mobile-nav__link Распродажа
+                        li.mobile-nav__item
+                            a(href="#").mobile-nav__link Мишка playtoday
+                        li.mobile-nav__item
+                            a(href="#").mobile-nav__link Пляжная одежда
+                        li.mobile-nav__item
+                            a(href="#").mobile-nav__link В школу
+
+                    .mobile-nav__info
+                        span.mobile-nav__title Нужна помощь?
+                        ul.mobile-nav__tels
+                            li.mobile-nav__tel
+                                a(href="tel:+784997077365") 8 (499) 707-73-65
+                            li.mobile-nav__tel
+                                a(href="tel:+788005057365") 8 (800) 505-73-65
+                        button(type="button" data-toggle='modal', data-target='#exampleModal').mobile-nav__loc.btn-underline.icon.btn-underline--white
+                            span Нижний Новгород

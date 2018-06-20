@@ -1,5 +1,5 @@
 mixin modal-location(data)
-        #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
             .modal-dialog.modal-dialog-centered(role='document')
                 .modal__content.location
                     .modal__header
@@ -8,7 +8,7 @@ mixin modal-location(data)
                             span(aria-hidden='true')
                     .modal__body
                         .location__city
-                            select(placeholder="this is a placeholder").location__search.js-cityes-list
+                            select.location__search.js-cityes-list
                                 option Москва
                                 option Санкт-Петербург
                                 option Екатеринбург

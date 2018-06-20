@@ -1,5 +1,5 @@
 mixin choose-size(data)
-    .choose-size.modal.fade(tabindex='-1', id="choose-modal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+    .choose-size.modal.fade(tabindex='-1', id="choose-modal" role="dialog" aria-hidden="true")
         .modal-dialog.modal-dialog-centered(role='document')
             .modal__content.location
                 .modal__header
@@ -33,7 +33,7 @@ mixin choose-size(data)
                             label.sizes__item
                                 input(type="radio" name="size-1").sizes__radio
                                 span 146
-                        a(href="#" _target="blank").choose-size__table.btn-underline
+                        a(href="#" target="_blank").choose-size__table.btn-underline
                             span Таблица размеров
                 .modal__footer.choose-size__footer
                     button.choose-size__btn.btn.btn--lg.btn--darken.js-add-cart(type='button') Добавить в корзину

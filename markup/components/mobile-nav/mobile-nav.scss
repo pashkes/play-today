@@ -1,0 +1,181 @@
+.mobile-nav {
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 80%;
+    top: 0;
+    transform: translateX(-100%);
+    background-color: #fff;
+    transition: 0.3s all ease;
+    will-change: transform;
+    visibility: hidden;
+    z-index: 10;
+    &.opened {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    @include media-breakpoint-up(sm) {
+        width: 70%;
+    }
+    @include media-breakpoint-up(md) {
+        width: 600px;
+    }
+    @include media-breakpoint-up(xl) {
+        display: none;
+    }
+    &__wrapper {
+        display: block;
+        flex-direction: column;
+        padding: 0;
+        overflow-y: auto;
+        max-height: 100vh;
+        width: 100%;
+        background-color: #666666;
+        box-shadow: 10px 0 8px -3px rgba(0, 0, 0, 0.35);
+        transition: 0.3s all ease;
+    }
+
+    &__tabs {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__tab {
+        flex-grow: 1;
+        a {
+            position: relative;
+            display: block;
+            font-size: 15px;
+            text-transform: uppercase;
+            padding: 18px 15px;
+            background-color: #f4f4f4;
+            border: 1px solid #e3e3e3;
+            border-right: none;
+            text-align: center;
+            transition: 0.2s all ease;
+            font-weight: 400;
+            &.active {
+                background-color: #fff;
+            }
+            &:hover {
+                color: #000;
+            }
+        }
+        &:first-of-type a {
+            border-left: none;
+        }
+    }
+    &__content {
+        &:not(.active) {
+            display: none;
+        }
+    }
+    &__submenu-wrapper {
+
+        &:not(.active) {
+            display: none;
+        }
+        &.active {
+            display: block;
+        }
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        &--main {
+            &.hide {
+                display: none;
+            }
+        }
+        &--dark {
+            .mobile-nav__link {
+                color: #fff;
+                background-color: #666666;
+                border-bottom-color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__item {
+        position: relative;
+    }
+    &__link,
+    &__back {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 9px 25px 9px 22px;
+        border: none;
+        border-bottom: 1px solid #c6c6c6;
+        background-color: #fff;
+        font-weight: 400;
+        font-size: 15px;
+        &--has-submenu {
+            &::before {
+                content: '';
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include bg($icon-angle-right);
+            }
+        }
+    }
+    &__back {
+        padding-left: 30px;
+        text-align: left;
+        text-transform: uppercase;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include bg($icon-back)
+        }
+    }
+    &__submenu-wrapper {
+        display: none;
+        &.active {
+            display: block;
+        }
+        .mobile-nav__link {
+            padding-left: 30px;
+        }
+    }
+    &__footer {
+        padding-bottom: 20px;
+        flex-grow: 1;
+        background-color: #666666;
+    }
+    &__loc {
+        margin-top: 10px;
+        span {
+            font-size: 12px;
+        }
+    }
+    &__title {
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        display: block;
+    }
+    &__tels {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+        a {
+            display: block;
+            font-size: 12px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+    }
+    &__info {
+        padding-top: 20px;
+        padding-left: 23px;
+    }
+}

@@ -1,18 +1,19 @@
 include ../menu/menu.pug
+include ../mobile-nav/mobile-nav.pug
 
 mixin header(data)
     header.header.js-header
        .header__top
            .container
                .header__inner
-                   button(type="button").header__burder-btn
+                   button(type="button").header__burder-btn.js-toggle-menu
                         span show/hide menu
                    .header__preferences
-                        button(type="model" data-toggle='modal', data-target='#exampleModal').header__location.btn-underline.icon
+                        button(type="button" data-toggle='modal', data-target='#exampleModal').header__location.btn-underline.icon
                             span Нижний Новгород
                         .header__select-lang
                             select.js-custom-select
-                                option(value="rus") Русский
+                                option(value="rus" selected) Русский
                                 option(value="eng") English
                                 option(value="deu") Deucht
                                 option(value="fr") French
@@ -31,3 +32,4 @@ mixin header(data)
                         span 12
                         .header__tooltip.tooltip Ваша корзина пуста
        +menu()
+    +mobile-nav()

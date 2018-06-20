@@ -27,6 +27,16 @@ a {
             @include bg($icon-pointer);
         }
     }
+    &--white.icon  {
+        &::before {
+            @include bg($icon-pointer-white);
+        }
+        span {
+            color: #fff;
+            border-bottom-color: #fff;
+
+        }
+    }
     &.uppercase {
         text-transform: uppercase;
     }

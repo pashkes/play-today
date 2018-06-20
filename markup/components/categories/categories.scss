@@ -20,6 +20,8 @@
         list-style-type: none;
     }
     &__item {
+        position: relative;
+        align-items: center;
         &.active {
             .categories__link {
                 font-weight: 600;
@@ -37,20 +39,21 @@
     }
     &__link {
         position:relative;
-        display: inline-flex;
-        padding: 15px 27px 15px 15px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 15px 0 15px 15px;
         font-size: 14px;
         text-transform: uppercase;
         line-height: 1.71;
         font-weight: 500;
     }
     &__show-menu {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
+        display: inline-block;
         width: 27px;
         height: 27px;
+        margin-top: 12px;
+        vertical-align: top;
         background-color: transparent;
         border: none;
         font-size: 0;
