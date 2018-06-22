@@ -5,6 +5,7 @@
         mobileFirst: true,
         appendDots: $('.banners .dots'),
         initialSlide: 2,
+        slidesToShow: 1,
         responsive: [
             {
                 breakpoint: 767,
@@ -14,12 +15,7 @@
                 }
             },
             {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },{
-            breakpoint: 1345,
+            breakpoint: 1343,
             settings: {
                 slidesToShow: 3,
                 dots: false,

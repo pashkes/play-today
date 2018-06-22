@@ -56,13 +56,46 @@ mixin mobile-nav(data)
                     div(role="tabpanel" aria-labelledby="nav-girls-tab").mobile-nav__content#girls.fade
                         ul.mobile-nav__list
                             li.mobile-nav__item
-                                a(href="#").mobile-nav__link.mobile-nav__link--has-submenu Аксессуары
+                                a(href="#" data-category="4").mobile-nav__link.mobile-nav__link--has-submenu Аксессуары
                             li.mobile-nav__item
-                                a(href="#").mobile-nav__link.mobile-nav__link--has-submenu Одежда
+                                a(href="#" data-category="5").mobile-nav__link.mobile-nav__link--has-submenu Одежда
                             li.mobile-nav__item
-                                a(href="#").mobile-nav__link.mobile-nav__link--has-submenu Обувь
+                                a(href="#" data-category="6").mobile-nav__link.mobile-nav__link--has-submenu Обувь
                             li.mobile-nav__item
                                 a(href="#").mobile-nav__link Одежда
+                        div(data-category="4").mobile-nav__submenu-wrapper.js-mobile-submenu
+                            button(type="button").mobile-nav__back.js-come-back Аксессуары
+                            ul.mobile-nav__list
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Разное
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Ремни, подтяжки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Рюкзаки, сумки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Солнцезащитные очки
+                        div(data-category="5").mobile-nav__submenu-wrapper.js-mobile-submenu
+                            button(type="button").mobile-nav__back.js-come-back Аксессуары
+                            ul.mobile-nav__list
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Разное
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Ремни, подтяжки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Рюкзаки, сумки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Солнцезащитные очки
+                        div(data-category="6").mobile-nav__submenu-wrapper.js-mobile-submenu
+                            button(type="button").mobile-nav__back.js-come-back Аксессуары
+                            ul.mobile-nav__list
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Разное
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Ремни, подтяжки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Рюкзаки, сумки
+                                li.mobile-nav__item
+                                    a(href="#").mobile-nav__link Солнцезащитные очки
                 .mobile-nav__footer
                     ul.mobile-nav__list.mobile-nav__list--dark
                         li.mobile-nav__item

@@ -1,5 +1,5 @@
 .some-products {
-    padding-top: 114px;
+    padding-top: 104px;
     .tabs {
         display: flex;
         border-bottom: none;
@@ -7,6 +7,9 @@
     &__footer {
         padding-bottom: 48px;
         text-align: center;
+    }
+    .tabs__content {
+        padding-top: 25px;
     }
     .tabs__panel {
         .row {
@@ -19,6 +22,18 @@
         }
     }
     .product-card {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
+    }
+    .tabs__item {
+        &:first-child {
+            a {
+                min-width: 220px;
+            }
+        }
+        &:nth-child(2){
+            a {
+                min-width: 208px;
+            }
+        }
     }
 }

@@ -6,7 +6,10 @@
         padding-top: 22px;
     }
     &__card {
-        margin-bottom: 60px;
+        margin-bottom: 31px;
+        &--wide {
+            margin-bottom: 42px;
+        }
     }
     .sizes__item {
         margin-bottom: 10px;
@@ -15,10 +18,20 @@
         }
     }
     &__footer {
-        padding-top: 30px;
+        padding-top: 72px;
         text-align: center;
     }
     &__show-more {
         min-width: 190px;
+    }
+    .product-card__img {
+        margin-bottom: 0;
+    }
+    .product-card__inner {
+        margin-bottom: 9px;
+    }
+    .product-card__cost {
+        margin-bottom: 10px;
+        line-height: 1;
     }
 }

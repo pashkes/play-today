@@ -40,16 +40,23 @@ mixin footer(data)
                         li
                             a(href="tel:88005057365").footer__link 8 (800) 505-73-65
                         li
-                            a(href="#").footer__link Доставка и оплата
-                        li
                             a(href="#").footer__link.footer__title наши магазины
-            .col-md.footer__col-border.d-none.d-xl-block
+                    .footer__social.d-none.d-md-block.d-xl-none
+                        strong.footer__title Присоединяйся
+                        ul.social
+                            li.social__item
+                                a(href="#").social__link.social__link--vk vkontakte
+                            li.social__item
+                                a(href="#").social__link.social__link--insta instagram
+                            li.social__item
+                                a(href="#").social__link.social__link--fb facebook
+            .col-md.footer__col-border.d-md-none.d-xl-block
                 .footer__inner-col
-                    .footer__pay.d-none.d-md-block
+                    .footer__pay.d-none.d-xl-block
                         strong.footer__title Мы принимаем
                         img(src="%=static=%img/general/visa.png" width="48" height="55" alt="visa pay")
                         img(src="%=static=%img/general/master-card.png" width="38" height="26" alt="visa pay")
-                    .footer__social
+                    .footer__social.d-md-none.d-xl-block
                         strong.footer__title Присоединяйся
                         ul.social
                             li.social__item

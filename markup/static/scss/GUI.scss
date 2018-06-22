@@ -157,6 +157,7 @@ a {
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 2px;
+            line-height: 1.3;
             &:hover {
                 color: #000;
             }
@@ -195,7 +196,7 @@ a {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 35px 30px;
+        padding: 30px 30px 35px;
         pointer-events: auto;
         background-color: #fff;
         background-clip: padding-box;
@@ -211,6 +212,7 @@ a {
         color: #191e2a;
         font-size: 20px;
         font-weight: 300;
+        letter-spacing: 0.4px;
     }
     &__close {
         position: absolute;
@@ -358,6 +360,7 @@ a {
         }
 
         a {
+            text-align: center;
             &.active {
                 border-color: #f1f1f3;
                 background-color: #fff;
@@ -376,10 +379,12 @@ a {
         }
     }
     &__content {
-        padding-top: 20px;
+        padding-top: 17px;
         p {
+            margin-bottom: 23px;
             font-weight: 400;
             font-size: 14px;
+            line-height: 24px;
         }
         > .tabs__panel {
             display: none;
@@ -399,7 +404,7 @@ a {
     list-style-type: none;
     &__item {
         position:relative;
-        margin-right: 2px;
+        margin-right: 3px;
         font-size: 0;
         @include bg($icon-star-fill);
         &:last-child {

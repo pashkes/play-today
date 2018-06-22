@@ -1,8 +1,12 @@
 .promo {
     position:relative;
     font-size: 0;
+    @include media-breakpoint-up(md) {
+        padding-top: 20px;
+    }
     @include media-breakpoint-up(xl) {
         margin-bottom: 56px;
+        padding-top: 28px;
     }
     .slick-track {
         display: flex;
@@ -13,12 +17,12 @@
         text-align: center;
         overflow: hidden;
         img {
-            max-height: 467px;
+            max-height: 437px;
             @include media-breakpoint-up(md) {
                 max-height: 767px;
             }
             @include media-breakpoint-up(xl) {
-                max-height: 801px;
+                max-height: 836px;
             }
         }
     }
@@ -37,7 +41,7 @@
         display: inline-flex;
         align-items: flex-end;
         justify-content: center;
-        min-height: 465px;
+        min-height: 437px;
     }
     &__buttons {
         display: flex;
@@ -49,7 +53,7 @@
             bottom: 150px;
         }
         @include media-breakpoint-up(xl) {
-            bottom: 250px;
+            bottom: 298px;
         }
     }
     &__link {

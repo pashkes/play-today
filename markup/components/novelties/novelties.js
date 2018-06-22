@@ -11,13 +11,7 @@
                 }
             },
             {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 4,
-                }
-            },
-            {
-            breakpoint: 1344,
+            breakpoint: 1343,
             settings: {
                 slidesToShow: 5,
                 // variableWidth: true

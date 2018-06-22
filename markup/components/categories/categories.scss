@@ -41,7 +41,7 @@
         position:relative;
         display: inline-block;
         vertical-align: top;
-        padding: 15px 0 15px 15px;
+        padding: 13px 0 13px 15px;
         font-size: 14px;
         text-transform: uppercase;
         line-height: 1.71;
@@ -71,7 +71,7 @@
     &__sublist {
         display: none;
         margin: 0;
-        padding: 0 0 0 20px;
+        padding: 1px 0 14px 20px;
         list-style-type: none;
     }
     &__subitem {
@@ -83,7 +83,7 @@
     }
     &__sublink {
         display: block;
-        padding: 10px 15px;
+        padding: 7px 15px;
         font-size: 14px;
         letter-spacing: 0.42px;
     }

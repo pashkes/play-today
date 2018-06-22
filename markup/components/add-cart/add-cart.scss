@@ -1,4 +1,7 @@
 .add-cart {
+    .modal__title {
+        margin-bottom: 14px;
+    }
     &__body {
         margin-bottom: 30px;
         padding-bottom: 10px;
@@ -15,13 +18,23 @@
         }
     }
     &__btn {
+        min-width: 100%;
+        width: 100%;
         @include media-breakpoint-up(md) {
+            width: auto;
             margin: 0 15px;
         }
         &:first-child {
             margin-bottom: 15px;
             @include media-breakpoint-up(md) {
+                min-width: 205px;
                 margin-bottom: 0;
+            }
+        }
+        &:last-child {
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+                min-width: 175px;
             }
         }
     }
