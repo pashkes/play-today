@@ -1,195 +1,206 @@
 .product-info {
-    padding-top: 15px;
+  padding-top: 15px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 12px;
+  }
+  &__title {
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  &__articul {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding-right: 7px;
+    padding-left: 7px;
+    background-color: #f1f1f3;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__back {
+    color: #adabae;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__costs {
+    margin-bottom: 8px;
+  }
+  &__cost {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 400;
+    &--new {
+      color: #e12931;
+    }
+    &--old {
+      font-size: 24px;
+      text-decoration: line-through;
+    }
+  }
+  &__promocod {
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f1f3;
+  }
+  &__tooltip {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 297px;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition-base;
     @include media-breakpoint-up(lg) {
-        padding-left: 12px;
+      top: -30px;
+      left: initial;
+      right: calc(100% + 18px);
     }
-    &__title {
-        margin-bottom: 2px;
-        font-size: 20px;
-        font-weight: 400;
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      transform: none;
     }
-    &__articul {
-        display: inline-block;
-        margin-bottom: 24px;
-        padding-right: 7px;
-        padding-left: 7px;
-        background-color: #f1f1f3;
-        font-size: 14px;
-        font-weight: 400;
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: -7px;
+      left: 20px;
+      width: 15px;
+      height: 15px;
+      transform: rotate(45deg);
+      background-color: #fff;
+      @include media-breakpoint-up(lg) {
+        top: 34px;
+        left: initial;
+        right: -7px;
+      }
     }
-    &__back {
-        color: #adabae;
-        font-size: 14px;
-        text-transform: uppercase;
-    }
-    &__costs {
-        margin-bottom: 8px;
-    }
-    &__cost {
-        display: inline-block;
-        margin-right: 5px;
-        vertical-align: middle;
-        font-size: 30px;
-        line-height: 1;
-        font-weight: 400;
-        &--new {
-            color: #e12931;
-        }
-        &--old {
-            font-size: 24px;
-            text-decoration: line-through;
-        }
-    }
-    &__promocod {
-        position:relative;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #f1f1f3;
-    }
-    &__tooltip {
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 0;
-        width: 297px;
-        z-index: 3;
-        visibility: hidden;
-        opacity: 0;
-        transition: $transition-base;
-        @include media-breakpoint-up(lg) {
-            top: -30px;
-            left: initial;
-            right: calc(100% + 30px);
-        }
-        &.show {
-            visibility: visible;
-            opacity: 1;
-            transform: none;
-        }
-        &::before {
-            content: ' ';
-            position: absolute;
-            top: -7px;
-            left: 20px;
-            width: 15px;
-            height: 15px;
-            transform: rotate(45deg);
-            background-color:#fff;
-            @include media-breakpoint-up(lg) {
-                top: 34px;
-                left: initial;
-                right: -7px;
-            }
-        }
-    }
+  }
 
-    &__label-promocod {
-        padding: 4px 8px;
-        text-align: center;
-        background-color: #e12931;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-        text-transform: uppercase;
-        letter-spacing: 0.84px;
+  &__label-promocod {
+    padding: 4px 8px;
+    text-align: center;
+    background-color: #e12931;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.84px;
+    &:hover {
+      color: #fff;
     }
-    .sizes {
-        @include media-breakpoint-up(md) {
-            display: flex;
-            align-items: center;
-        }
+  }
+  .sizes {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
     }
-    .sizes__title {
-        margin-right: 20px;
-        white-space: nowrap;
+  }
+  .sizes__title {
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+  .sizes__item {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+  }
+  &__select-sizes {
+    padding-top: 21px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #f1f1f3;
+  }
+  &__table-size {
+    white-space: nowrap;
+    @include media-breakpoint-up(md) {
+      text-align: right;
     }
-    .sizes__item {
-        margin-top: 2px;
-        margin-bottom: 2px;
-        margin-right: 5px;
+  }
+  &__bonus {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #f1f1f3;
+  }
+  &__back-card {
+    display: block;
+    text-transform: uppercase;
+    margin-right: 19px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  &__total-discount {
+    margin-left: 14px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  &__btns-pay {
+    padding-top: 28px;
+    padding-bottom: 41px;
+  }
+  &__free-delivery {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__pay {
+    margin-bottom: 10px;
+    font-weight: 300;
+    @include media-breakpoint-up(sm) {
+      margin-right: 10px;
+      margin-bottom: 0;
     }
-    &__select-sizes {
-        padding-top: 21px;
-        padding-bottom: 17px;
-        border-bottom: 1px solid #f1f1f3;
+    @include media-breakpoint-up(lg) {
+      min-width: auto;
     }
-    &__table-size {
-        white-space: nowrap;
-        @include media-breakpoint-up(md) {
-            text-align: right;
-        }
+    @include media-breakpoint-up(xl) {
+      min-width: 199px;
     }
-    &__bonus {
-        padding-top: 19px;
-        padding-bottom: 19px;
-        border-bottom: 1px solid #f1f1f3;
+  }
+  &__favorite {
+    display: block;
+    position: relative;
+    font-size: 0;
+    @include bg($icon-big-heart);
+    transition: none;
+    &:hover {
+      @include bg($icon-big-heart-active)
     }
-    &__back-card {
-        display: block;
-        text-transform: uppercase;
-        margin-right: 19px;
+    @include media-breakpoint-up(sm) {
+      margin-left: 9px;
     }
-    &__total-discount {
-        margin-left: 14px;
-        font-size: 20px;
-        font-weight: 400;
+  }
+  &__characteristic {
+    padding: 5px 15px 5px 5px;
+    border-right: 1px solid #f1f1f3;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__technical {
+    td:not(.product-info__characteristic) {
+      font-size: 14px;
+      padding-left: 18px;
+      font-weight: 300;
     }
-    &__btns-pay {
-        padding-top: 28px;
-        padding-bottom: 41px;
+  }
+  &__current-color {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include bg($icon-label-color);
     }
-    &__free-delivery {
-        display: block;
-        margin-bottom: 24px;
-        font-size: 14px;
-        text-transform: uppercase;
-    }
-    &__pay {
-        margin-bottom: 10px;
-        @include media-breakpoint-up(sm) {
-            margin-right: 10px;
-            margin-bottom: 0;
-        }
-    }
-    &__favorite {
-        display: block;
-        position: relative;
-        font-size: 0;
-        @include bg($icon-big-heart);
-        transition: none;
-        &:hover {
-            @include bg($icon-big-heart-active)
-        }
-        @include media-breakpoint-up(sm) {
-            margin-bottom: 42px;
-            margin-left: 9px;
-        }
-    }
-    &__characteristic {
-        padding: 5px 15px 5px 5px;
-        border-right: 1px solid #f1f1f3;
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
-    &__technical {
-        td:not(.product-info__characteristic) {
-            font-size: 14px;
-            padding-left: 18px;
-            font-weight: 300;
-        }
-    }
-    &__current-color {
-        display: block;
-        position:relative;
-        padding-left: 30px;
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            @include bg($icon-label-color);
-        }
-    }
+  }
 
 }

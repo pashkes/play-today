@@ -1,54 +1,62 @@
 .sizes {
-    font-size: 0;
-    &__title {
-        display: block;
-        color: #010101;
-        font-size: 10px;
-        line-height: 24px;
-        text-transform: uppercase;
-        letter-spacing: 0.6px;
-        font-weight: 500;
-        &--xl {
-            text-transform: uppercase;
-            font-size: 14px;
-        }
+  font-size: 0;
+  &__title {
+    display: block;
+    color: #010101;
+    font-size: 10px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    &--xl {
+      text-transform: uppercase;
+      font-size: 14px;
     }
-    &__item {
-        position:relative;
-        width: 32px;
-        height: 27px;
-        margin-bottom: 0;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        vertical-align: top;
-        font-size: 14px;
-        line-height: 24px;
-        text-align: center;
-        z-index: 2;
+  }
+  &__item {
+    position: relative;
+    width: 32px;
+    height: 27px;
+    margin-bottom: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 0;
+    &:hover {
+      .sizes__radio:not(:disabled) + span {
+        background-color: $primary;
+        color: #fff;
+        border-color: $primary;
+        cursor: pointer;
+      }
     }
-    &__radio {
-        display: none;
-        + span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #f1f1f3;
-            font-weight: 500;
-            font-size: 14px;
-            z-index: -1;
-        }
-        &:checked + span {
-            background-color: $primary;
-            color: #fff;
-            border-color: $primary;
-        }
+  }
+  &__radio {
+    display: none;
+    + span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #f1f1f3;
+      font-weight: 300;
+      font-size: 14px;
+      z-index: -1;
     }
-    input[disabled] + span{
-        border-color: #f1f1f3;
-        color: #cecece;
+    &:checked + span {
+      background-color: $primary;
+      color: #fff;
+      border-color: $primary;
     }
+  }
+  input[disabled] + span {
+    border-color: #f1f1f3;
+    color: #cecece;
+  }
 
 }

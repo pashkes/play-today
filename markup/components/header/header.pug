@@ -2,34 +2,34 @@ include ../menu/menu.pug
 include ../mobile-nav/mobile-nav.pug
 
 mixin header(data)
-    header.header.js-header
-       .header__top
-           .container
-               .header__inner
-                   button(type="button").header__burder-btn.js-toggle-menu
-                        span show/hide menu
-                   .header__preferences
-                        button(type="button" data-toggle='modal', data-target='#exampleModal').header__location.btn-underline.icon
-                            span Нижний Новгород
-                        .header__select-lang
-                            select.js-custom-select
-                                option(value="rus" selected) Русский
-                                option(value="eng") English
-                                option(value="deu") Deucht
-                                option(value="fr") French
-                   a(href="#").header__logo
-                        picture
-                            source(media="(min-width: 768px)" srcset="%=static=%img/general/logo.png")
-                            img(src="%=static=%img/general/logo-xs.png" width="97" height="28" alt="Play today")
+  header.header.js-header
+    .header__top
+      .container
+        .header__inner
+          button(type="button").header__burder-btn.js-toggle-menu
+            span show/hide menu
+          .header__preferences
+            button(type="button" data-toggle='modal', data-target='#exampleModal').header__location.btn-underline.icon
+              span Нижний Новгород
+            .header__select-lang
+              select.js-custom-select
+                option(value="rus" selected) Русский
+                option(value="eng") English
+                option(value="deu") Deucht
+                option(value="fr") French
+          a(href="#").header__logo
+            picture
+              source(media="(min-width: 768px)" srcset="%=static=%img/general/logo.png")
+              img(src="%=static=%img/general/logo-xs.png" width="97" height="28" alt="Play today")
 
-                   form.header__item.header__item--search
-                       input(type="search").header__field.field.js-search-field
-                       button(type="button").header__show.js-search-show
-                   a(href="#").header__item.header__item--sign-in
-                   a(href="#").header__item.header__item--favorite
-                   // You need add class .has-products if have products
-                   a(href="#").header__item.header__item--cart
-                        span 12
-                        .header__tooltip.tooltip Ваша корзина пуста
-       +menu()
-    +mobile-nav()
+          form.header__item.header__item--search
+            input(type="search").header__field.field.js-search-field
+            button(type="button").header__show.js-search-show
+          a(href="#").header__item.header__item--sign-in
+          a(href="#").header__item.header__item--favorite
+          // You need add class .has-products if have products
+          a(href="#").header__item.header__item--cart
+            span 12
+            .header__tooltip.tooltip Ваша корзина пуста
+    +menu()
+  +mobile-nav()

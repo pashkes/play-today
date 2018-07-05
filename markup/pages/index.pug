@@ -1,27 +1,27 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../components/head/head.pug
-    include ../components/header/header.pug
-    include ../components/promo/promo.pug
-    include ../components/modal-location/modal-location.pug
-    include ../components/banners/banners.pug
-    include ../components/novelties/novelties.pug
-    include ../components/subscribe/subscribe.pug
-    include ../components/footer/footer.pug
+  include ../components/head/head.pug
+  include ../components/header/header.pug
+  include ../components/promo/promo.pug
+  include ../components/modal-location/modal-location.pug
+  include ../components/banners/banners.pug
+  include ../components/novelties/novelties.pug
+  include ../components/subscribe/subscribe.pug
+  include ../components/footer/footer.pug
 
-    head
-        +head(head.defaults)
+  head
+    +head(head.defaults)
 
-    body.page
-        .home-header
-            +header()
-            +promo()
-        .page-adv
-            +novelties()
-            +banners()
-        +subscribe()
-        +footer()
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        +modal-location()
-        script(src='%=static=%js/main%=hash=%.js')
+  body.page
+    .home-header
+      +header()
+      +promo()
+    .page-adv
+      +novelties()
+      +banners()
+    +subscribe()
+    +footer()
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    +modal-location()
+    script(src='%=static=%js/main%=hash=%.js')

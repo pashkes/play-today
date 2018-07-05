@@ -1,67 +1,66 @@
 .subscribe {
+  background-color: #f2f4f7;
+  @include media-breakpoint-up(xl) {
+    background-color: transparent;
+  }
+  &__bg {
     background-color: #f2f4f7;
+    padding-top: 21px;
+    padding-bottom: 23px;
+    @include media-breakpoint-up(md) {
+      padding-top: 27px;
+      padding-bottom: 26px;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__form {
+    display: flex;
+  }
+  &__label {
+    margin-bottom: 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.07px;
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+      margin-bottom: 0;
+      margin-right: 14px;
+    }
     @include media-breakpoint-up(xl) {
-        background-color: transparent;
+      margin-right: 30px;
+      font-size: 16px;
     }
-    &__bg {
-        background-color: #f2f4f7;
-        padding-top: 21px;
-        padding-bottom: 23px;
-        @include media-breakpoint-up(md) {
-            padding-top: 27px;
-            padding-bottom: 26px;
-        }
+  }
+  &__field {
+    min-width: 177px;
+    margin-right: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 31px;
+    flex-grow: 1;
+    @include media-breakpoint-up(md) {
+      min-width: 264px;
+      margin-right: 12px;
+      height: auto;
+      padding-right: 13px;
+      padding-left: 13px;
     }
-    &__inner {
-        display: flex;
-        flex-direction: column;
-        @include media-breakpoint-up(md) {
-            flex-direction: row;
-            align-items: center;
-        }
+    @include media-breakpoint-up(xl) {
+      min-width: 320px;
+      margin-right: 20px;
     }
-    &__form {
-        display: flex;
+  }
+  &__submit {
+    padding: 5px 12px;
+    @include media-breakpoint-up(md) {
+      min-width: 130px;
     }
-    &__label {
-        margin-bottom: 6px;
-        font-size: 13px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.07px;
-        @include media-breakpoint-up(md) {
-            font-size: 14px;
-            margin-bottom: 0;
-            margin-right: 14px;
-        }
-        @include media-breakpoint-up(xl) {
-            margin-right: 30px;
-            font-size: 16px;
-        }
-    }
-    &__field {
-        min-width: 177px;
-        margin-right: 5px;
-        padding-left: 8px;
-        padding-right: 8px;
-        height: 31px;
-        flex-grow: 1;
-        @include media-breakpoint-up(md) {
-            min-width: 264px;
-            margin-right: 12px;
-            height: auto;
-            padding-right: 13px;
-            padding-left: 13px;
-        }
-        @include media-breakpoint-up(xl) {
-            min-width: 320px;
-            margin-right: 20px;
-        }
-    }
-    &__submit {
-        padding: 5px 12px;
-        @include media-breakpoint-up(md) {
-            min-width: 130px;
-        }
-    }
+  }
 }

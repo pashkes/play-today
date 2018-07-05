@@ -1,87 +1,104 @@
 // Common styles of the project
 
 html, body {
-    height: 100%;
-    font: 16px/1.5 'Roboto Condensed', Arial sans-serif;
-    color: #000;
-    font-weight: 300;
+  height: 100%;
+  font: 16px/1.5 'Roboto Condensed', Arial sans-serif;
+  color: #000;
+  font-weight: 300;
 }
+
 .home-header {
-    background-color: #F0F3F9;
+  background-color: #F0F3F9;
 }
+
 .position-static {
-    position: static;
+  position: static;
 }
+
 img {
-    height: auto;
-    max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
+
 h2 {
-    font-size: 24px;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-style: normal;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-style: normal;
 }
+
 .container {
-    padding-right: 14px;
-    padding-left: 14px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
+
 .page-adv {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .page-catalog {
-    padding-top: 26px;
-    .checkbox__icon {
-        left: 23px;
-    }
+  padding-top: 26px;
+  .checkbox__icon {
+    left: 23px;
+  }
 }
+
 .modal-backdrop {
-    z-index: -1;
-    &.show {
-        z-index: 1040;
-    }
+  z-index: -1;
+  &.show {
+    z-index: 1040;
+  }
 }
+
 .ml-xl-auto {
-    @include media-breakpoint-up(xl) {
-        margin-left: auto;
-    }
-}
-.ml-auto {
+  @include media-breakpoint-up(xl) {
     margin-left: auto;
+  }
 }
+
+.ml-auto {
+  margin-left: auto;
+}
+
 .advert {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    background-color: #171518;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  background-color: #171518;
+  color: #fff;
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+  &__discount {
+    margin-right: 38px;
+    margin-left: 38px;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0.28px;
+    line-height: 1;
+    font-family: Bebas;
+    font-weight: 700;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  &:hover {
     color: #fff;
-    @include media-breakpoint-up(md) {
-        display: flex;
-    }
-    &__discount {
-        margin-right: 38px;
-        margin-left: 38px;
-        color: #ffffff;
-        font-size: 40px;
-        letter-spacing: 0.28px;
-        line-height: 1;
-        font-family: Bebas;
-        font-weight: 700;
-    }
-    &__text {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.5;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-    }
-    &:hover {
-        color: #fff;
-    }
+  }
 }
+
 .single-product {
-    padding-top: 43px;
+  padding-top: 43px;
+}
+.zoomContainer {
+  @media (max-width: 1343px) {
+    display: none;
+  }
 }
 

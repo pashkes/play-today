@@ -1,20 +1,19 @@
 mixin promo()
-    .promo
-        ul.promo__slider.js-promo-slider
-            li.promo__slide
-                .promo__photo
-                    div.promo__wrapper
-                        picture
-                            source(media="(min-width: 1344px)" srcset="%=static=%img/general/promo-first-img.jpg")
-                            source(media="(min-width: 768px)" srcset="%=static=%img/general/promo-first-img-md.jpg")
-                            img(src="%=static=%img/general/promo-girl.jpg" alt="Девочки")
-                .promo__buttons
-                    a(href="#").promo__link Мальчики
-                    a(href="#").promo__link Девочки
-            li.promo__slide
-                .promo__photo
-                    div.promo__wrapper
-                        img(src="%=static=%img/general/promo-baby.jpg" alt="Новорожденные")
+  .promo
+    ul.promo__slider.js-promo-slider
+      li.promo__slide
+        .promo__photo
+          div(data-section).promo__wrapper
+            picture
+              source(media="(min-width: 1344px)" srcset="%=static=%img/general/promo-first-img.jpg")
+              source(media="(min-width: 768px)" srcset="%=static=%img/general/promo-first-img-md.jpg")
+              img(src="%=static=%img/general/promo-girl.jpg" alt="Девочки").parallax
+        .promo__buttons
+          a(href="#").promo__link Мальчики
+          a(href="#").promo__link Девочки
+      li.promo__slide
+        .promo__photo
+          div(data-section).promo__wrapper
+            img(src="%=static=%img/general/promo-baby.jpg" alt="Новорожденные").parallax
 
-        .dots.promo__dots
-
+    .dots.promo__dots

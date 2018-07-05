@@ -1,38 +1,38 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../components/head/head.pug
-    include ../components/header/header.pug
-    include ../components/modal-location/modal-location.pug
-    include ../components/subscribe/subscribe.pug
-    include ../components/footer/footer.pug
-    include ../components/categories/categories.pug
-    include ../components/catalog/catalog.pug
-    include ../components/filter/filter.pug
-    include ../components/choose-size/choose-size.pug
-    include ../components/add-cart/add-cart.pug
-    head
-        +head(head.defaults)
+  include ../components/head/head.pug
+  include ../components/header/header.pug
+  include ../components/modal-location/modal-location.pug
+  include ../components/subscribe/subscribe.pug
+  include ../components/footer/footer.pug
+  include ../components/categories/categories.pug
+  include ../components/catalog/catalog.pug
+  include ../components/filter/filter.pug
+  include ../components/choose-size/choose-size.pug
+  include ../components/add-cart/add-cart.pug
+  head
+    +head(head.defaults)
 
-    body
-        a(href="#").advert
-            span.advert__text на весеннюю коллекцию
-            span.advert__discount -25%
-            span.advert__text Бесплатная доставка от 4 000.-
-        +header()
-        .page-catalog
-            .container
-                .row.no-gutters
-                    .col-sm-6.col-md-5.col-xl-2
-                        +categories()
-                    .col-sm-6.col-md-7.col-xl-10
-                        +filter()
-                        +catalog()
-        +subscribe()
-        +footer()
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        +modal-location()
-        +choose-size()
-        +add-cart
-        .modal-backdrop.fade
-        script(src='%=static=%js/main%=hash=%.js')
+  body
+    a(href="#").advert
+      span.advert__text на весеннюю коллекцию
+      span.advert__discount -25%
+      span.advert__text Бесплатная доставка от 4 000.-
+    +header()
+    .page-catalog
+      .container
+        .row.no-gutters
+          .col-sm-6.col-md-5.col-xl-2
+            +categories()
+          .col-sm-6.col-md-7.col-xl-10
+            +filter()
+            +catalog()
+    +subscribe()
+    +footer()
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    +modal-location()
+    +choose-size()
+    +add-cart
+    .modal-backdrop.fade
+    script(src='%=static=%js/main%=hash=%.js')

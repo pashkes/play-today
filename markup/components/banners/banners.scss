@@ -1,109 +1,121 @@
 .banners {
+  position: relative;
+  padding-bottom: 33px;
+  text-align: center;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 100%;
+  }
+  .container {
+    padding: 0;
+    @include media-breakpoint-up(xl) {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    padding-bottom: 48px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 0;
+    order: -1;
+  }
+  &__slide {
     position: relative;
-    padding-bottom: 33px;
-    text-align: center;
-    overflow: hidden;
-    @include media-breakpoint-up(md) {
-        width: 768px;
-        margin-right: auto;
-        margin-left: auto;
-    }
     @include media-breakpoint-up(xl) {
-        width: 100%;
-    }
-    .container {
-        padding: 0;
-        @include media-breakpoint-up(xl) {
-            padding-right: 14px;
-            padding-left: 14px;
-        }
-    }
-    @include media-breakpoint-up(md) {
-        padding-bottom: 48px;
-    }
-    @include media-breakpoint-up(xl) {
-        padding-bottom: 0;
-        order: -1;
-    }
-    &__slide {
-        position: relative;
-        @include media-breakpoint-up(xl) {
-            text-align: left;
-        }
-    }
-    .slick-list {
-        text-align: left;
-        font-size: 0;
-        @include media-breakpoint-up(md) {
-            margin-right: -5px;
-            margin-left: -5px;
-        }
-        @include media-breakpoint-up(xl) {
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
-    .slick-slide {
-        width: 400px;
-        display: inline-block;
-        @include media-breakpoint-up(md) {
-            margin-right: 5px;
-            margin-left: 5px;
-        }
-        @include media-breakpoint-up(xl) {
-            margin-right: 57px;
-            margin-left: 0;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-    img {
-        display: inline-block;
-        @include media-breakpoint-up(md) {
-            max-width: 380px;
-        }
-        @include media-breakpoint-up(xl) {
-            max-width: 100%;
-        }
+      text-align: left;
     }
 
-    &__buttons {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        bottom: 27px;
-        display: flex;
-        justify-content: center;
+  }
+  .slick-list {
+    text-align: left;
+    font-size: 0;
+    @include media-breakpoint-up(md) {
+      margin-right: -5px;
+      margin-left: -5px;
     }
-    &__link {
-        min-width: 131px;
-        margin-right: 9px;
-        padding: 7px 20px;
-        vertical-align: top;
-        font-size: 15px;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-        background-color: rgba(#fff, .5);
-        text-align: center;
-        &:last-child {
-            margin-right: 0;
-        }
+    @include media-breakpoint-up(xl) {
+      margin-right: 0;
+      margin-left: 0;
     }
-    &__url {
-        display: block;
-        text-align: center;
+  }
+  .slick-slide {
+    width: 400px;
+    display: inline-block;
+    @include media-breakpoint-up(md) {
+      margin-right: 5px;
+      margin-left: 5px;
     }
-    .dots {
-        bottom: 39px;
-        @include media-breakpoint-up(md) {
-            bottom: 24px;
-        }
+    @include media-breakpoint-up(xl) {
+      margin-right: 57px;
+      margin-left: 0;
+      &:last-child {
+        margin-right: 0;
+      }
     }
-    .dots .slick-dots button::before {
-        @include media-breakpoint-up(md) {
-            background-color: #ECEBF0;
-        }
+  }
+  img {
+    display: inline-block;
+    @include media-breakpoint-up(md) {
+      max-width: 380px;
     }
+    @include media-breakpoint-up(xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 27px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+  }
+  &__link {
+    min-width: 131px;
+    margin-right: 9px;
+    padding: 7px 20px;
+    vertical-align: top;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background-color: rgba(#fff, .5);
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__url {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s all ease;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+    img {
+      transition: 0.3s all ease;
+    }
+  }
+  .dots {
+    bottom: 39px;
+    @include media-breakpoint-up(md) {
+      bottom: 24px;
+    }
+  }
+  .dots .slick-dots button::before {
+    @include media-breakpoint-up(md) {
+      background-color: #ECEBF0;
+    }
+  }
 }

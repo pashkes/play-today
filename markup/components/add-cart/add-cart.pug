@@ -1,28 +1,28 @@
 mixin add-cart(data)
-    .add-cart.modal.fade(tabindex='-1', id="add-cart" role="dialog" aria-hidden="true")
-        .modal-dialog.modal-dialog-centered(role='document')
-            .modal__content
-                .modal__header.add-cart__header
-                    span.modal__title Товар добавлен в корзину
-                    p.add-cart__text Всего в вашей корзине 1 товар.
-                        a(href="#") Просмотреть
-                    button.btn-close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                .modal__body.add-cart__body
-                    .row
-                        .col-sm-8
-                            img(src="%=static=%img/content/product-mini.jpg" alt="Куртка" width="100" height="100").add-cart__photo
-                            .add-cart__info
-                                h3.add-cart__name Куртка
-                                span.add-cart__articul Артикул 182059
-                                p.add-cart__size
-                                    | Размер
-                                    span 98/104
-                        .col-sm-auto.ml-auto
-                            div.add-cart__price
-                                span.add-cart__cost 3 998.-
-                                span.add-cart__amount 1 шт.
+  .add-cart.modal.fade(tabindex='-1', id="add-cart" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal__content
+        .modal__header.add-cart__header
+          span.modal__title Товар добавлен в корзину
+          p.add-cart__text Всего в вашей корзине 1 товар.
+            a(href="#") Просмотреть
+          button.btn-close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true')
+        .modal__body.add-cart__body
+          .row
+            .col-sm-8
+              img(src="%=static=%img/content/product-mini.jpg" alt="Куртка" width="100" height="100").add-cart__photo
+              .add-cart__info
+                h3.add-cart__name Куртка
+                span.add-cart__articul Артикул 182059
+                p.add-cart__size
+                  | Размер
+                  span 98/104
+            .col-sm-auto.ml-auto
+              div.add-cart__price
+                span.add-cart__cost 3 998.-
+                span.add-cart__amount 1 шт.
 
-                .modal__footer.add-cart__footer
-                    button.add-cart__btn.btn.btn--lg(type='button', data-dismiss='modal', aria-label='Close') Продолжить покупки
-                    a(href="#").add-cart__btn.btn.btn--lg.btn--darken Оформить заказ
+        .modal__footer.add-cart__footer
+          button.add-cart__btn.btn.btn--lg(type='button', data-dismiss='modal', aria-label='Close') Продолжить покупки
+          a(href="#").add-cart__btn.btn.btn--lg.btn--darken Оформить заказ

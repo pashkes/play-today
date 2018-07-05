@@ -1,157 +1,211 @@
 .product-card {
+  position: relative;
+  text-align: left;
+  &:hover {
+    .product-card__info-buttons {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__inner {
     position: relative;
-    text-align: left;
-    &__inner {
-        position: relative;
-        margin-bottom: 10px;
-    }
-    &__img {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 10px;
-        vertical-align: top;
-        background-color: #f4f4f4;
-        @include media-breakpoint-up(md) {
-            margin-bottom: 8px;
-        }
-        @include media-breakpoint-up(xl) {
-            margin-bottom: 9px;
-        }
-    }
-    img {
-        display: inline-block;
-        vertical-align: top;
-    }
-    &__info {
-        text-align: center;
-    }
-    &__title {
-        margin-bottom: 0;
-        @include media-breakpoint-up(xl) {
-            margin-bottom: 3px;
-        }
+    margin-bottom: 10px;
+  }
+  &__img {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    vertical-align: top;
+    background-color: #f4f4f4;
+    overflow: hidden;
 
-        a {
-            font-weight: 400;
-            font-size: 16px;
-        }
-
+    @include media-breakpoint-up(md) {
+      margin-bottom: 8px;
     }
-    &__price {
-        font-size: 16px;
-        font-weight: 300;
+    @include media-breakpoint-up(xl) {
+      width: 240px;
+      height: 400px;
+      margin-bottom: 9px;
     }
-    &__tags {
-        li {
-            margin-bottom: 5px;
-        }
+    &--wide {
+      @include media-breakpoint-up(xl) {
+        width: 1092px;
+        height: 640px;
+      }
     }
-    &__info-buttons {
-        position: absolute;
-        right: 7px;
-        top: 50%;
-        transform: translateY(-50%);
+    &--xl {
+      @include media-breakpoint-up(xl) {
+        width: 500px;
+        height: 587px;
+      }
     }
-    &__cost {
-        margin-bottom: 5px;
-        font-weight: 400;
-        @include media-breakpoint-up(md) {
-            margin-bottom: 8px;
-        }
-        @include media-breakpoint-up(xl) {
-            margin-bottom: 6px;
-        }
-    }
-    &__btn {
-        position: relative;
+  }
+  img {
+    display: inline-block;
+    vertical-align: top;
+    &:first-child ~ img {
+      display: none;
+      @include media-breakpoint-up(xl) {
         display: block;
-        width: 35px;
-        height: 35px;
-        margin-bottom: 5px;
-        border-radius: 50%;
-        background-color: #fff;
-        border: none;
-        font-size: 0;
-        transition: $transition-base;
-        &:last-child {
-            margin-bottom: 0;
-        }
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition-base;
+      &:first-child {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__info {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 0;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 3px;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+  }
+  &__price {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  &__tags {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  &__info-buttons {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition-base;
+  }
+  &__cost {
+    margin-bottom: 5px;
+    font-weight: 400;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 8px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 6px;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    font-size: 0;
+    transition: $transition-base;
+    &:focus {
+      outline: none;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      background-color: $primary;
+    }
+    &--favorite {
+      &::before {
+        @include bg($icon-favorite)
+      }
+      &:hover {
         &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          @include bg($icon-favorite-white)
         }
-        &:hover {
-            background-color: $primary;
-        }
-        &--favorite {
-            &::before {
-                @include bg($icon-favorite)
-            }
-            &:hover {
-                &::before {
-                    @include bg($icon-favorite-white)
-                }
-            }
-        }
-        &--size {
-            &.active {
-                background-color: $primary;
-                &::before {
-                    @include bg($icon-ruler-white);
-                }
-            }
-            &::before {
-                @include bg($icon-ruler)
-            }
-            &:hover {
-                &::before {
-                    @include bg($icon-ruler-white);
-                }
-            }
-        }
-        &--cart {
-            &::before {
-                @include bg($icon-shopping-bag)
-            }
-            &:hover {
-                &::before {
-                    @include bg($icon-shopping-bag-white)
-                }
-            }
-        }
+      }
     }
-    .sizes {
-        opacity: 0;
-        visibility: hidden;
-        transform: $transition-base;
-    }
-    &__sizes {
-        padding: 0 6px;
-        position: absolute;
-        left: 100%;
-        top: 0;
-        bottom: 0;
-        width: 44px;
-        padding-top: 38px;
-        background: #fff;
-        z-index: 2;
-        &.show {
-            .sizes {
-                opacity: 1;
-                visibility: visible;
-            }
+    &--size {
+      &.active {
+        background-color: $primary;
+        &::before {
+          @include bg($icon-ruler-white);
         }
+      }
+      &::before {
+        @include bg($icon-ruler)
+      }
+      &:hover {
+        &::before {
+          @include bg($icon-ruler-white);
+        }
+      }
     }
-    &__discount {
-        color: #e12931;
+    &--cart {
+      &::before {
+        @include bg($icon-shopping-bag)
+      }
+      &:hover {
+        &::before {
+          @include bg($icon-shopping-bag-white)
+        }
+      }
     }
-    &__old-cost {
-        display: inline-block;
-        vertical-align: top;
-        margin-left: 3px;
-        text-decoration: line-through;
+  }
+  .sizes {
+    opacity: 0;
+    visibility: hidden;
+    transform: $transition-base;
+  }
+  &__sizes {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 44px;
+    padding: 0 6px;
+    background: #fff;
+    z-index: 2;
+    &.show {
+      .sizes {
+        opacity: 1;
+        visibility: visible;
+      }
     }
+  }
+  &__discount {
+    color: #e12931;
+  }
+  &__old-cost {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3px;
+    text-decoration: line-through;
+  }
 }
