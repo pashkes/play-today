@@ -18,15 +18,6 @@ a {
   line-height: 20px;
   font-weight: 300;
   font-size: 14px;
-  &.icon {
-    padding: 0 0 0 27px;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      @include bg($icon-pointer);
-    }
-  }
   &--white.icon {
     &::before {
       @include bg($icon-pointer-white);
@@ -98,7 +89,7 @@ a {
         position: absolute;
         top: -4px;
         left: 0;
-        @include bg($icon-cart)
+        @include bg-svg($cart-xl)
       }
     }
   }
@@ -308,7 +299,7 @@ a {
       position: absolute;
       top: 28px;
       left: 26px;
-      @include bg($icon-mark);
+      @include bg-svg($mark);
       z-index: 1;
     }
     &::after {
@@ -407,7 +398,7 @@ a {
     position: relative;
     margin-right: 3px;
     font-size: 0;
-    @include bg($icon-star-fill);
+    @include bg-svg($star);
     &:last-child {
       margin-right: 0;
     }

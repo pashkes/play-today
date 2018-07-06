@@ -166,10 +166,10 @@
     display: block;
     position: relative;
     font-size: 0;
-    @include bg($icon-big-heart);
+    @include bg-svg($favorite-xl);
     transition: none;
     &:hover {
-      @include bg($icon-big-heart-active)
+      @include bg-svg($favorite-xl-hover)
     }
     @include media-breakpoint-up(sm) {
       margin-left: 9px;

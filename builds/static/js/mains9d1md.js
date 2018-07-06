@@ -19129,6 +19129,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 })();
 
 (function () {
+  const btnArrow = $('.js-show-submenu');
+
+  const onClickShowSubmenuHandler = function (evt) {
+    const el = evt.target.closest('.categories__item');
+    el.classList.toggle('active');
+  };
+  btnArrow.on('click', onClickShowSubmenuHandler)
+})();
+
+(function () {
   $('.js-add-cart').on('click', function () {
     $('#choose-modal').modal('hide');
     setTimeout(function () {
@@ -19175,16 +19185,6 @@ $(function () {
 });
 
 (function () {
-  const btnArrow = $('.js-show-submenu');
-
-  const onClickShowSubmenuHandler = function (evt) {
-    const el = evt.target.closest('.categories__item');
-    el.classList.toggle('active');
-  };
-  btnArrow.on('click', onClickShowSubmenuHandler)
-})();
-
-(function () {
   // Set abbreviation current language when the page on load and for change language
   const selectLang = $('.js-custom-select');
   selectLang.SumoSelect(
@@ -19225,6 +19225,8 @@ const onMouseLeaveShowBgHandler = function () {
 };
 submenuItems.on('mouseover', onMouseLeaveShowBgHandler);
 submenuItems.on('mouseleave', onMouseOverHideBgHandler);
+
+
 
 (function () {
   const mobileNav = $('.js-mobile-nav');

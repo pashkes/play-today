@@ -9,7 +9,7 @@ mixin header(data)
           button(type="button").header__burder-btn.js-toggle-menu
             span show/hide menu
           .header__preferences
-            button(type="button" data-toggle='modal', data-target='#exampleModal').header__location.btn-underline.icon
+            button(type="button" data-toggle='modal', data-target='#exampleModal').header__location.btn-underline
               span Нижний Новгород
             .header__select-lang
               select.js-custom-select
@@ -29,7 +29,8 @@ mixin header(data)
           a(href="#").header__item.header__item--favorite
           // You need add class .has-products if have products
           a(href="#").header__item.header__item--cart
-            span 12
+            //количество товаров внутри span
+            span
             .header__tooltip.tooltip Ваша корзина пуста
     +menu()
   +mobile-nav()

@@ -24,4 +24,7 @@ html(class="no-js", lang="ru")
     +footer()
     //- Main scripts. You can replace it, but I recommend you to leave it here
     +modal-location()
+    //- Include your components here
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
     script(src='%=static=%js/main%=hash=%.js')

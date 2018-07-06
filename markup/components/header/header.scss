@@ -72,7 +72,7 @@
     background-color: transparent;
     font-size: 0;
     span {
-      @include bg($icon-burger);
+      @include bg-svg($burger);
       @include media-breakpoint-up(md) {
         @include bg($icon-burger-md);
       }
@@ -86,8 +86,18 @@
   }
   &__location {
     margin-right: 52px;
+    padding-left: 27px;
     &:focus {
       outline: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include bg-svg($pointer);
+
     }
   }
   &__preferences {
@@ -105,9 +115,10 @@
 
   &__show {
     position: relative;
-    background-color: transparent;
     border: none;
-    @include bg($icon-search);
+    padding: 0;
+    background-color: transparent;
+    @include bg-svg($search);
     z-index: 1;
     &:focus {
       outline: none;
@@ -142,9 +153,9 @@
     }
     &--sign-in {
       display: none;
-      @include bg($icon-profile);
+      @include bg-svg($profile);
       &:hover {
-        @include bg($icon-profile-hover);
+        background: url(%=static=%minified-svg/profile-hover.svg) 0 0 no-repeat;
       }
       @include media-breakpoint-up(xl) {
         display: block;
@@ -153,9 +164,9 @@
     &--favorite {
       margin-left: auto;
       margin-right: 30px;
-      @include bg($icon-favorite);
+      @include bg-svg($favorite);
       &:hover {
-        @include bg($icon-favorite-hover)
+        background: url(%=static=%minified-svg/favorite-hover.svg) 0 0 no-repeat;
       }
       @include media-breakpoint-up(md) {
         margin-right: 63px;
@@ -172,6 +183,8 @@
       position: relative;
       min-width: 15px;
       z-index: 2;
+      width: 15px;
+      height: 20px;
       @include media-breakpoint-up(md) {
         margin-right: 13px;
       }
@@ -182,19 +195,24 @@
         &::before {
           @include bg($icon-shopping-bag-hover);
         }
+        span {
+          font-size: 10px;
+
+        }
       }
       &::before {
         content: '';
         position: absolute;
         left: 0;
-        @include bg($icon-shopping-bag);
+        @include bg-svg($cart);
+        background: url(%=static=%minified-svg/cart.svg) 0 0 no-repeat;
         z-index: 1;
       }
       span {
         position: relative;
         z-index: 3;
         color: #ffffff;
-        font-size: 10px;
+        font-size: 0;
         font-weight: 300;
         line-height: 24px;
       }
@@ -251,7 +269,7 @@
       visibility: visible;
       opacity: 1;
       + .header__show {
-        @include bg($icon-search-hover);
+        @include bg-svg($search-hover)
       }
     }
   }

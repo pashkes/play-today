@@ -48,13 +48,13 @@
     &.slick-prev {
       &::before {
         top: 0;
-        @include bg($icon-arrow-top);
+        @include bg-svg($arrow-up);
       }
     }
     &.slick-next {
       &::before {
         bottom: 0;
-        @include bg($icon-arrow-bootom);
+        @include bg-svg($arrow-down);
       }
     }
   }
@@ -67,23 +67,6 @@
     .tags__item {
       margin-bottom: 18px;
     }
-  }
-  &__view {
-    //.slick-slide {
-    //  img {
-    //    width: 0 !important;
-    //    height: 0 !important;
-    //    display: none !important;
-    //  }
-    //}
-    //
-    //.slick-current, .slick-active {
-    //  img {
-    //    width: auto !important;
-    //    height: auto !important;
-    //    display: block !important;
-    //  }
-    //}
   }
 }
 .zoomContainer {

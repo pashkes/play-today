@@ -119,7 +119,7 @@
         right: 15px;
         top: 50%;
         transform: translateY(-50%);
-        @include bg($icon-angle-right);
+        @include bg-svg($arrow-right);
       }
     }
   }
@@ -133,7 +133,10 @@
       left: 7px;
       top: 50%;
       transform: translateY(-50%);
-      @include bg($icon-back)
+      background: url(%=static=%minified-svg/left-arrow.svg) 0 0 no-repeat;
+      background-size: 24px 13px;
+      width: 23px;
+      height: 14px;
     }
   }
   &__submenu-wrapper {

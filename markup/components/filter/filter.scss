@@ -39,7 +39,7 @@
       position: absolute;
       top: 50%;
       right: 20px;
-      @include bg($icon-cross-white);
+      @include bg-svg($close);
       transform: translateY(-50%);
     }
   }
@@ -143,12 +143,12 @@
     }
     &--to-three {
       .filter__name::before {
-        @include bg($icon-sort-default);
+        @include bg-svg($to-two);
       }
     }
     &--to-two {
       .filter__name::before {
-        @include bg($icon-to-two);
+        @include bg-svg($to-four);
       }
     }
   }
@@ -176,7 +176,7 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      @include bg($icon-arrow-down);
+      @include bg-svg($arrow-down-sm);
     }
   }
   &__sublist {
@@ -207,7 +207,7 @@
   &__checkbox {
     display: block;
     width: 100%;
-    padding: 20px 15px 20px 55px;
+    padding: 20px 7px 20px 55px;
     input:checked + .checkbox__icon + span {
       font-weight: 600;
     }

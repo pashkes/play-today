@@ -4,9 +4,9 @@ module.exports = {
         "active": true,
         "workflow": "sprite",
         "symbolsConfig": {
-            "loadingType": "inject",
+            "loadingType": "separate-file",
             "usePolyfillForExternalSymbols": true,
-            "pathToExternalSymbolsFile": ""
+            "pathToExternalSymbolsFile": "static/img/"
         }
     },
     "css": {

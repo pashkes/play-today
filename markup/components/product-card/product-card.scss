@@ -141,11 +141,11 @@
     }
     &--favorite {
       &::before {
-        @include bg($icon-favorite)
+        @include bg-svg($favorite)
       }
       &:hover {
         &::before {
-          @include bg($icon-favorite-white)
+          @include bg-svg($favorite-white-stroke);
         }
       }
     }
@@ -153,25 +153,29 @@
       &.active {
         background-color: $primary;
         &::before {
-          @include bg($icon-ruler-white);
+          @include bg-svg($linear-hover);
         }
       }
       &::before {
-        @include bg($icon-ruler)
+        @include bg-svg($linear)
       }
       &:hover {
         &::before {
-          @include bg($icon-ruler-white);
+          @include bg-svg($linear-hover);
         }
       }
     }
     &--cart {
       &::before {
-        @include bg($icon-shopping-bag)
+        width: 18px;
+        height: 23px;
+        background: url(%=static=%minified-svg/cart.svg) 0 0 no-repeat;
+        background-size: 16px 23px;
       }
       &:hover {
         &::before {
-          @include bg($icon-shopping-bag-white)
+          background: url(%=static=%minified-svg/cart-hover.svg) 0 0 no-repeat;
+          background-size: 16px 23px;
         }
       }
     }

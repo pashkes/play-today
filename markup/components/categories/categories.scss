@@ -29,7 +29,7 @@
       }
       button {
         &::before {
-          @include bg($icon-arrow-up);
+          @include bg-svg($arrow-up-sm);
         }
       }
       .categories__sublist {
@@ -61,7 +61,7 @@
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      @include bg($icon-arrow-down)
+      @include bg-svg($arrow-down-sm)
     }
     &:focus {
       outline: none;
