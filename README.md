@@ -3,7 +3,7 @@
 **Pages of list:** 
 
  1. [Home](https://pashkes.github.io/playtoday/)
- 2. [enter link description here](https://pashkes.github.io/play-today/catalog)
+ 2. [Catalog](https://pashkes.github.io/play-today/catalog)
  3. [Catalog-to-two](https://pashkes.github.io/play-today/catalog-to-two)
  4. [Single product](https://pashkes.github.io/play-today/single-product)
 
