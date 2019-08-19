@@ -3,24 +3,25 @@
 const path = require('path');
 const cwd = process.cwd();
 const webpack = tars.require('webpack');
-const TerserJsPlugin = tars.require('terser-webpack-plugin');
 
 const staticFolderName = tars.config.fs.staticFolderName;
-const compressJs = tars.flags.release || tars.flags.min || tars.flags.m;
+const compressJs = tars.flags.release || tars.flags.min;
 const generateSourceMaps = tars.config.sourcemaps.js.active && tars.isDevMode;
 const sourceMapsDest = tars.config.sourcemaps.js.inline ? 'inline-' : '';
 const sourceMapsType = `#${sourceMapsDest}source-map`;
-const webpackMode = !compressJs ? 'development' : 'production';
 
 let outputFileNameTemplate = '[name]';
 let modulesDirectories = ['node_modules'];
-let rules = [
+let preLoaders = [
     {
         test: /\.js$/,
-        loader: 'source-map-loader',
-        enforce: 'pre'
+        loader: 'source-map-loader'
     }
 ];
+let loaders = [{
+    test: /\.json$/,
+    loader: 'json'
+}];
 let plugins = [
     new webpack.DefinePlugin({
         'process.env': {
@@ -28,7 +29,6 @@ let plugins = [
         }
     })
 ];
-let minimizers = [];
 
 if (process.env.npmRoot) {
     modulesDirectories.push(process.env.npmRoot);
@@ -36,25 +36,24 @@ if (process.env.npmRoot) {
 
 if (compressJs) {
     outputFileNameTemplate += `${tars.options.build.hash}.min`;
-    minimizers.push(
-        new TerserJsPlugin({
-            terserOptions: {
-                compress: {
-                    /* eslint-disable camelcase */
-                    drop_console: tars.config.js.removeConsoleLog,
-                    drop_debugger: tars.config.js.removeConsoleLog
-                    /* eslint-enable camelcase */
-                },
-                mangle: false
-            }
-        })
+    plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                /* eslint-disable camelcase */
+                drop_console: tars.config.js.removeConsoleLog,
+                drop_debugger: tars.config.js.removeConsoleLog
+                /* eslint-enable camelcase */
+            },
+            mangle: false
+        }),
+        new webpack.optimize.DedupePlugin()
     );
 }
 
 if (tars.config.js.webpack.providePlugin) {
     plugins.push(
         new webpack.ProvidePlugin(tars.config.js.webpack.providePlugin)
-    );
+    )
 }
 
 if (tars.options.watch.isActive && tars.config.js.webpack.useHMR) {
@@ -64,24 +63,20 @@ if (tars.options.watch.isActive && tars.config.js.webpack.useHMR) {
 }
 
 if (tars.config.js.lint) {
-    rules.push(
+    preLoaders.push(
         {
             test: /\.js$/,
             loader: 'eslint-loader',
-            enforce: 'pre',
-            include: `${cwd}/markup`,
-            options: {
-                configFile: `${cwd}/.eslintrc`
-            }
+            include: `${cwd}/markup`
         }
     );
 }
 
 if (tars.config.js.useBabel) {
-    rules.push(
+    loaders.push(
         {
             test: /\.js$/,
-            loader: 'babel-loader',
+            loader: 'babel',
             include: /markup/
         }
     );
@@ -116,35 +111,32 @@ function prepareEntryPoints(entryConfig) {
 
     return entryConfig;
 }
+
 module.exports = {
-    mode: webpackMode,
     // We have to add some pathes to entry point in case of using HMR
     entry: prepareEntryPoints({
         main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main.js`)
     }),
 
     output: {
-        path: path.resolve(`${(tars.isDevMode) ? `${tars.config.devPath}` : `${tars.options.build.path}`}/${staticFolderName}/js`),
+        path: path.resolve(`${cwd}/dev/${staticFolderName}/js`),
         publicPath: `./${staticFolderName}/js/`,
         filename: `${outputFileNameTemplate}.js`
     },
 
-    devtool: generateSourceMaps ? sourceMapsType : false,
+    devtool: generateSourceMaps ? sourceMapsType : null,
 
     watch: tars.options.watch.isActive && !tars.config.js.webpack.useHMR,
 
     module: {
-        rules
+        preLoaders,
+        loaders
     },
 
     plugins,
 
     resolveLoader: {
-        modules: modulesDirectories
-    },
-
-    optimization: {
-        minimizer: minimizers
+        modulesDirectories
     },
 
     resolve: {
@@ -153,5 +145,9 @@ module.exports = {
             components: path.resolve(`./markup/${tars.config.fs.componentsFolderName}`),
             static: path.resolve(`./markup/${staticFolderName}`)
         }
+    },
+
+    eslint: {
+        configFile: `${cwd}/.eslintrc`
     }
 };

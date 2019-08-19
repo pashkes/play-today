@@ -58,5 +58,6 @@ module.exports = {
         "staticFolderName": "static",
         "imagesFolderName": "img",
         "componentsFolderName": "components"
-    }
+    },
+    "devPath": "./dev/"
 };

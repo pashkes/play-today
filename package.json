@@ -1,5 +1,5 @@
 {
-  "name": "tars",
+  "name": "playtoday",
   "version": "1.9.7",
   "engines": {
     "npm": "^3.x.x",
@@ -10,13 +10,14 @@
     "linux",
     "win32"
   ],
-  "description": "Powerfull markup builder",
+  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "babel-core": "^6.16.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "bootstrap": "^4.1.1",
+    "gh-pages": "^2.1.1",
     "jquery": "^3.3.1",
     "js-image-zoom": "^0.5.0",
     "popper": "^1.0.1",
@@ -81,18 +82,18 @@
   },
   "scripts": {
     "install": "node ./tars/helpers/install-additional-deps.js",
-    "lint": "eslint webpack.config.js tars/*.js tars/tasks/**/*.js tars/watchers/**/*.js tars/helpers/**/*.js gulpfile.js --rule 'valid-jsdoc: [0, {}]'"
+    "lint": "eslint webpack.config.js tars/*.js tars/tasks/**/*.js tars/watchers/**/*.js tars/helpers/**/*.js gulpfile.js --rule 'valid-jsdoc: [0, {}]'",
+    "start": "tars dev -l",
+    "build": "tars build -r",
+    "deploy": "npm run build && gh-pages -d builds"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tars/tars.git"
+    "url": "https://github.com/pashkes/play-today.git"
   },
-  "author": "Artem Malko",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tars/tars/issues"
-  },
-  "homepage": "https://github.com/tars/tars",
+  "author": "Pavlo Tarasenko",
+  "license": "",
+  "homepage": "",
   "keywords": [
     "gulp",
     "makeup",
